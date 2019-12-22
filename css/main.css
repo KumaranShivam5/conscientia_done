@@ -1,0 +1,105 @@
+.background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/library_wireframe.png);
+    z-index: -10;
+    background-size: 100%;
+    background-position-y: 90%;
+    background-repeat: no-repeat;
+}
+
+body {
+background:black !important;
+}
+
+canvas {
+ 
+}
+
+
+@font-face {
+    font-family: nasa;
+    src: url('../fonts/nasalization-rg.ttf');
+  }
+.scroll_text{
+    color: #06fff58c;
+    font-weight: 100;
+    font-family: nasa;
+    font-variant: small-caps;
+    font-size: 2vh;
+}
+
+
+#table {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+}
+
+#centeralign {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.grad_wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    background: linear-gradient(180deg, black, transparent, transparent, black); 
+    text-shadow:0px 0px 14px #9afdc1ab;
+}
+
+.top-bar{
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    
+    z-index: 99999;   
+}
+.top-bar-one {
+    top:0px;
+    background: linear-gradient(45deg, #00e8e8, transparent);
+    animation:top-slider 5s 0.2s infinite;
+    -webkit-animation:top-slider 5s 0.2s infinite;
+}
+
+.top-bar-two {
+    top:2px;
+    background: linear-gradient(-45deg, #00e8e8, transparent);
+    animation:top-slider 5s 0.2s infinite;
+    -webkit-animation:top-slider 1s 3s infinite;
+}
+
+@keyframes top-slider {
+    0% {
+      width: 0;
+    }
+    70% {
+      width: 100%;
+    }
+    100% {
+      width:0%;
+    }
+  }
+
+@-webkit-keyframes top-slider{
+    0% {
+        width: 0;
+      }
+      70% {
+        width: 100%;
+      }
+      100% {
+        width:0%;
+      }
+}
+
+.event_card{
+  
+}

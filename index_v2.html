@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Conscientia||2020</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  
+  <title>Conscientia||2020</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="js/three.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script>
+    var camera, scene, fogcolor;
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
+    camera.position.set(0, 0, 0);
+
+    // scene
+    scene = new THREE.Scene();
+    fogColor = new THREE.Color(0x000010);
+    scene.background = fogColor;
+    scene.fog = new THREE.Fog(fogColor, 2500, 2500);
+    var ambientLight = new THREE.AmbientLight(0x00ff00, 0.5);
+    scene.add( ambientLight );
+    var pointLight = new THREE.PointLight(0x29C7D5, 5);
+    camera.add( pointLight );
+    scene.add(camera);
+
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    
+
+    var materialMonk = new THREE.MeshLambertMaterial({
+                wireframe: true
+            });
+    var cube = new THREE.Mesh(geometry, material);
+    cube.scale.set(3, 3, 3);
+    cube.position.z = -10;
+    scene.add(cube);
+  </script>
+
+</head>
+<body>
+  <!--WebGL content starts here-->
+ <!--
+    <script>
+      //import * as THREE from './js/three.module.js';
+       
+      
+      var camera, scene, ambientColor, fogColor, iist , spaceShip , controls, renderer;
+      
+      init();
+      
+      //animate();
+      
+      function init(){
+          //scene creation
+          scene= new THREE.Scene();
+          scene.background=new THREE.Color(0x000019);
+          
+         
+          var renderer = new THREE.WebGLRenderer();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          document.body.appendChild(renderer.domElement);
+           
+          //document.body.appendChild(renderer.domElement);
+          
+          
+          //camera setup
+          camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight, 1, 1000 );
+          camera.position.set( 50, 0, 0 );
+          
+          //adding a cube
+          
+          var geometry = new THREE.BoxGeometry(1,1,1);
+          var material= new THREE.MeshBasicMaterial({color: 0x44aa88});
+          var cube= new THREE.Mesh(geometry,material);
+          cube.rotation.set(1,3,56);
+          scene.add(cube);
+          renderer.render(scene,camera);
+          
+          
+          //LIGHTINGs
+          
+          const color = 0xFFFFFF;
+          const intensity = 1;
+          const light = new THREE.PointLight(color, intensity);
+          light.position.set(30, 4, 10);
+          scene.add(light);
+          fogColor = new THREE.Color(0x000010);
+          scene.background = fogColor;
+          scene.fog = new THREE.Fog(fogColor, 2500, 2500);
+          var ambientLight = new THREE.AmbientLight(0x00ff00, 0.5);
+          scene.add( ambientLight );
+          var pointLight = new THREE.PointLight(0x29C7D5, 5);
+          
+          //loading_IIST_model
+          var wireframe_glow = new THREE.MeshLambertMaterial({
+                wireframe: true
+            });
+          var iist;
+          const loader = new THREE.OBJLoader();
+          loader.load('city.obj', function(object){
+            object.traverse(function(child){
+              if(child instanceof THREE.Mesh){
+                child.material=wireframe_glow;
+              }
+            });
+            object.position.z = 10;
+                object.position.y = 0;
+                object.position.x = 0;
+                //scene.add(object);
+                object.scale.set(5, 5, 5);
+                object.rotation.x = 0;
+                scene.add(object);
+                city = object;
+            scene.add(object);
+            iist=object;
+          });  
+
+          //RESIZE
+          window.addEventListener( 'resize', onWindowResize, false );
+
+      }
+      
+      function onWindowResize() {
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize( window.innerWidth, window.innerHeight );
+
+    }
+      
+  </script>
+ -->
+ 
+  
+  <!--WebGL content ends here-->
+
+
+
+
+
+
+
+<!-- central_menu_visor -->
+<!--<div class='grain'></div>-->
+<div class='intro'>
+  <div class='center'>
+    <div class='core'></div>
+    <div class='outer_one'>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+      <div class='outer_one__piece'></div>
+    </div>
+    <div class='outer_two'>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+      <div class='outer_two__piece'></div>
+    </div>
+    <div class='outer_three'>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+      <div class='outer_three__piece'></div>
+    </div>
+    <div class='outer_four'>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+      <div class='outer_four__piece'></div>
+    </div>
+    <div class='outer_five'>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+      <div class='outer_five__piece'></div>
+    </div>
+    <div class='pieces'>
+      <div class='future_ui__piece'>
+        <span>Portal Conscientia</span>
+        <div class='line'></div>
+        <div class='tip'>
+          enter..
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Events</span>
+        <div class='line'></div>
+        <div class='tip'>
+          Beam me up!
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Workshops</span>
+        <div class='line'></div>
+        <div class='tip'>
+          Engineering!
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Sponsors</span>
+        <div class='line'></div>
+        <div class='tip'>
+          Charge laz0rs!
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Team</span>
+        <div class='line'></div>
+        <div class='tip'>
+          Status report!
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Connect</span>
+        <div class='line'></div>
+        <div class='tip'>
+          3
+        </div>
+      </div>
+      <div class='future_ui__piece'>
+        <span>Login</span>
+        <div class='line'></div>
+        <div class='tip'>
+          4
+        </div>
+      </div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+      <div class='future_ui__piece blank'></div>
+    </div>
+  </div>
+</div>
+<!--central _menu_visor_ends_here-->
+
+  <script  src="./js/script.js"></script>
+
+</body>
+</html>

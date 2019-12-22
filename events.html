@@ -1,0 +1,579 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <title>EVENTS || Conscientia||2020</title>
+  <link rel="icon" href="images/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+  <style>
+    body {
+      margin: 0;
+      background: black !important;
+      padding: 2px;
+    }
+
+    canvas {
+      background: url(images/border_rotated.png);
+      background-size: 100% 100%;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      top: 0vh !important;
+      right: 0px !important;
+      opacity: 0.9;
+
+    }
+
+    .main_logo {
+      position: absolute;
+      border-radius: 50%;
+      width: 400px;
+      height: 400px;
+      /* background: white; */
+      background-repeat: no-repeat;
+      top: -225px;
+      left: -170px;
+      background-size: 100%;
+      background-image: url(images/logo_modified_white.png);
+    }
+
+    .outer_one,
+    .core {
+      display: none !important;
+    }
+
+    #timer {
+      color: white;
+    }
+  </style>
+
+  <!--style.css for menu circle-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.css">
+ 
+  <script src="./js/three.js-master/build/three.js"></script>
+
+  <script src="./js/three.js-master/examples/js/controls/OrbitControls.js"></script>
+  <script src="./js/three.js-master/examples/js/loaders/OBJLoader.js"></script>
+  <script src="js/three.js-master/examples/js/loaders/GLTFLoader.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="top-bar top-bar-one"></div>
+<div class="top-bar top-bar-two"></div>
+
+  <!-- central_menu_visor -->
+  <div class='grain'></div>
+  <div class='intro'>
+    <div class='center' style="z-index:10;">
+      <div class='core'></div>
+      <div class="main_logo"></div>
+      <div class='outer_one'>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+        <div class='outer_one__piece'></div>
+      </div>
+      <div class='outer_two'>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+        <div class='outer_two__piece'></div>
+      </div>
+      <div class='outer_three'>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+        <div class='outer_three__piece'></div>
+      </div>
+      <div class='outer_four'>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+        <div class='outer_four__piece'></div>
+      </div>
+      <div class='outer_five'>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+        <div class='outer_five__piece'></div>
+      </div>
+      <div class='pieces'>
+        <div class='future_ui__piece'>
+          <span>EVENT 1</span>
+          <div class='line'></div>
+          <div class='tip'>
+            enter..
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EvENT BTEA</span>
+          <div class='line'></div>
+          <div class='tip'>
+            Beam me up!
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT GAMMA</span>
+          <div class='line'></div>
+          <div class='tip'>
+            Engineering!
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENTS_DELTA</span>
+          <div class='line'></div>
+          <div class='tip'>
+            Charge laz0rs!
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT_EPSILON</span>
+          <div class='line'></div>
+          <div class='tip'>
+            Status report!
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT_PHI</span>
+          <div class='line'></div>
+          <div class='tip'>
+            3
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT_CHI</span>
+          <div class='line'></div>
+          <div class='tip'>
+            4
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT_OMEGA</span>
+          <div class='line'></div>
+          <div class='tip'>
+            4
+          </div>
+        </div>
+        <div class='future_ui__piece'>
+          <span>EVENT_ZETA</span>
+          <div class='line'></div>
+          <div class='tip'>
+            4
+          </div>
+        </div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+      </div>
+    </div>
+  </div>
+  
+  <!--central _menu_visor_ends_here-->
+  <div class="container-fluid" style="width:100vw;height:100vh;">
+    <div class="row" style="height:40%;">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-8" style="background: black;
+      padding-right: 10px;
+      padding-left: 1px;overflow-x: scroll;overflow-y: hidden;">
+        <!--Events expanded menu starts-->
+        <div class="row" style="justify-content: center;height:100%;">
+          <div class="col-sm-2 align-middle event_card event_alpha">Alpha A</div>
+          <div class="col-sm-2 event_card event_alpha">Alpha B</div>
+          <div class="col-sm-2 event_card event_apha">Alpha C</div>
+          <div class="col-sm-2 event_card event_alpha">Alpha D</div>
+          <div class="col-sm-2 event_card event_alpha">Alpha E</div>
+          <div class="col-sm-2 event_card event_alpha">Alpha F</div>
+        </div>
+        <!--events expanded menu ends here-->
+      </div>
+    </div>
+    <div class="row" style="height:60%;">
+      <div class="col-lg-4 align-text-bottom" style="align-self: flex-end;height:100%;">
+        <div class="grad_wrapper"></div>
+
+        <div id="table">
+          <div id="centeralign">
+            <h1 id="head_para"></h1>
+            <p class="align-middle scroll_text" id="para">
+              Conscientia, IIST, one of the largest technical fests of South India provides a platform for one and all
+              to witness one of the most exuberant and groundbreaking amalgamations of space science and technology with
+              pure delight and ebullience. With a plethora of events like motivating orations, state of the art
+              technological exhibitions, cut-throat competitions and breathtaking performances for its audience, the
+              four day extravaganza challenges you to step out of your comfort zone and ?challenge the school of
+              conventional thinking. Come, join us for Conscientia and rediscover the unknown potential in you.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8" id="iist_viewport_div">
+        <canvas id="iist_viewport"></canvas>
+      </div>
+    </div>
+  </div>
+  <!--WebGL script starts-->
+  <script>
+    var camera, scene, fogcolor;
+    camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2000);
+    var lookat_vector = new THREE.Vector3(0, 0, 0);
+    camera.lookAt(lookat_vector);
+    camera.position.set(0, 20, 80);
+
+    // scene
+
+    scene = new THREE.Scene();
+
+    const color = 0x6fffff;
+    const intensity = 1;
+    const light = new THREE.AmbientLight(color, intensity);
+    //const light = new THREE.DirectionalLight(color, intensity);
+    const light_point = new THREE.PointLight(0x3300FF, 50);
+    scene.add(light);
+    light_point.position.set(0, 0, 200)
+    scene.add(light_point);
+    //scene.add( ambientLight );
+
+    //camera.add( pointLight );
+    scene.add(camera);
+
+    var my_canvas = document.getElementById('iist_viewport');
+    var iist_viewport_div = document.querySelector('#iist_viewport_div');
+    var renderer = new THREE.WebGLRenderer({ canvas: my_canvas, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    iist_viewport_div.appendChild(renderer.domElement);
+    /*
+          
+            var iist;
+            
+            var loader = new THREE.OBJLoader();
+            loader.load( 'iist_complete_final_solid.obj',
+                        function( obj ){
+                                obj.traverse( function( child ) {
+                                        if ( child instanceof THREE.Mesh ) {
+                                                child.material = ship_material;
+                                                }
+                                        } );
+                                obj.position.set(0,0,0);
+                                obj.rotation.set(0,0,0);
+                                scene.add( obj );
+                                iist=obj;
+                                },
+                        function( xhr ){
+                            console.log( (xhr.loaded / xhr.total * 100) + "% loaded")
+                                },
+                        function( err ){
+                            console.error( "Error loading 'ship.obj'")
+                                }
+                        );
+    */
+    renderer.gammaOutput = true;
+    renderer.gammaFactor = 2.2;
+    var ship_material = new THREE.MeshLambertMaterial({ color: 0x6fffff, wireframe: true });
+    var loader = new THREE.GLTFLoader();
+    loader.load('iist_complete_trial_joined_V_7.glb',
+      function (gltf) {
+        gltf.scene.traverse(
+          function (child) {
+            if (child.isMesh) { child.material = ship_material; }
+
+          }
+        );
+        iist = gltf.scene;
+        iist.scale.set(0.8, 0.8, 0.8);
+        iist.position.set(0, -10, 0)
+        scene.add(iist);
+        gltf.camera;
+        //scene.add(gltf.camera);
+      }
+
+    );
+
+    {
+
+      scene.fog = new THREE.Fog(0xffffff, 0.2, 1000);
+    }
+
+
+    /*
+    
+    window.addEventListener('mousemove', function (e) {
+        var mouse3D = new THREE.Vector3(
+            (event.clientX / window.innerWidth) * 150 - 75,
+            -10, 0);
+    
+        iist.lookAt(mouse3D);
+        //ship.lookAt(mouse3D);
+    });
+    
+    */
+
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      // cube.rotation.y += 0.01;
+      iist.rotation.y += 0.001;
+      //cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+  <!--WebGL script ends-->
+  <!--typeset script-->
+  <script>
+
+
+    function typeEffect(element, speed) {
+      var text = element.innerHTML;
+      element.innerHTML = "";
+
+      var i = 0;
+      var timer = setInterval(function () {
+        if (i < text.length) {
+          element.append(text.charAt(i));
+          i++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+    }
+
+
+    // application
+    var speed = 75;
+    var h1 = document.getElementById('head_para');
+    var p = document.getElementById('para');
+    var delay = h1.innerHTML.length * speed + speed;
+
+    // type affect to header
+    typeEffect(h1, speed);
+
+
+    // type affect to body
+    setTimeout(function () {
+      p.style.display = "inline-block";
+      typeEffect(p, speed);
+    }, delay);
+
+  </script>
+  <!--typeset script ends-->
+</body>
+
+</html>
