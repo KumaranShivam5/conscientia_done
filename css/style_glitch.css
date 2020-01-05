@@ -1026,6 +1026,7 @@ a.switcher:before {
   0% {
     -webkit-transform: translate(2px, 5px);
             transform: translate(2px, 5px);
+    border-top: 200px solid #00f3ff78;
   }
   2% {
     -webkit-transform: translate(4px, 5px);
@@ -1070,6 +1071,7 @@ a.switcher:before {
   22% {
     -webkit-transform: translate(2px, 3px);
             transform: translate(2px, 3px);
+            border-top: 200px solid #a900ff78;
   }
   24% {
     -webkit-transform: translate(1px, 2px);
@@ -1198,6 +1200,7 @@ a.switcher:before {
   86% {
     -webkit-transform: translate(5px, 2px);
             transform: translate(5px, 2px);
+            border-top: 200px solid #00f3ff78;
   }
   88% {
     -webkit-transform: translate(4px, 2px);
@@ -1250,12 +1253,15 @@ a.switcher:before {
   53% {
     -webkit-transform: scaleX(1) scaleY(1) skewX(0deg);
             transform: scaleX(1) scaleY(1) skewX(0deg);
+            border-top: 200px solid #a900ff78;
   }
 }
+
 @keyframes tr-bag {
   0% {
     -webkit-transform: translate(2px, 5px);
             transform: translate(2px, 5px);
+    border-top: 200px solid #00f3ff78;
   }
   2% {
     -webkit-transform: translate(4px, 5px);
@@ -1300,6 +1306,7 @@ a.switcher:before {
   22% {
     -webkit-transform: translate(2px, 3px);
             transform: translate(2px, 3px);
+            border-top: 200px solid #a900ff78;
   }
   24% {
     -webkit-transform: translate(1px, 2px);
@@ -1428,6 +1435,7 @@ a.switcher:before {
   86% {
     -webkit-transform: translate(5px, 2px);
             transform: translate(5px, 2px);
+            border-top: 200px solid #00f3ff78;
   }
   88% {
     -webkit-transform: translate(4px, 2px);
@@ -1480,8 +1488,11 @@ a.switcher:before {
   53% {
     -webkit-transform: scaleX(1) scaleY(1) skewX(0deg);
             transform: scaleX(1) scaleY(1) skewX(0deg);
+            border-top: 200px solid #a900ff78;
   }
 }
+
+
 @-webkit-keyframes bg-move {
   0% {
     background-position: 0 0;
@@ -1496,5 +1507,25 @@ a.switcher:before {
   }
   100% {
     background-position: 0 -32px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .clock span{
+    width:100vw;
+    position:absolute;
+    font-size:5vh;
+    line-height: 2;
+  }
+  .container-fluid{
+    position:absolute;
+    top:30vh;
+  }
+  .glitch .clock span:before ,.glitch .clock span:after{
+    width:100vw;
+  }
+  .figure{
+    border-top:200px solid #00f3ff78;
   }
 }

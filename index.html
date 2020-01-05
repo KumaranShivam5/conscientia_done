@@ -60,15 +60,15 @@
   </style>
 
   <!--style.css for menu circle-->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/style_glitch.css">
+  <link rel="stylesheet" href="./css/style.css?v=2.1">
+  <link rel="stylesheet" href="./css/main.css?v=2.0">
+  <link rel="stylesheet" href="./css/style_glitch.css?v=2.0">
   <script src="http://threejs.org/build/three.min.js"></script>
-  <script src="./js/script_glitch.js"></script>
+  <script src="./js/script_glitch.js?v=2.0"></script>
   <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
   <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
   <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
-
+  <link rel="stylesheet" href="css/style_viewport_scroll.css?v=2.0"/>
 
 </head>
 
@@ -309,7 +309,7 @@
           </div>
         </div>
         <div class='future_ui__piece'>
-          <span>Team</span>
+          <a href="team.html"><span>Team</span></a>
           <div class='line'></div>
           <div class='tip'>
             Status report!
@@ -368,7 +368,7 @@
   <div class="container-fluid" style="width:100vw;height:100vh;">
     <div class="row" style="height:50%;">
       <div class="col-lg-4"></div>
-      <div class="col-lg-8" style="background: linear-gradient(45deg, #e720ff8a,#213c96 ,#2f8c94);
+      <div class="col-lg-8 grad_back" style="background: linear-gradient(45deg, #e720ff8a,#213c96 ,#2f8c94);
       padding-right: 10px;
       padding-left: 1px;">
         <!--Script for countdown timer-->
@@ -406,6 +406,32 @@
       </div>
 
       <div class="col-lg-8" id="iist_viewport_div">
+        <div class="viewport-text box">
+          <!-- viewport scrolling text -->
+          <ul>
+              <li>..VIEWPORT DISPLAYING....</li>
+              <li>INDIAN</li>
+              <li>INSTITUTE</li>
+              <li>OF</li>
+              <li>SPACE</li>
+              <li>SCIENCE</li>
+              <li>AND</li>
+              <li>TECHNOLOGY</li>
+              <li>THIRUVANANTHAPURAM</li>
+              <li>INDIA</li>
+              <li>LONGITUDE:8.5241° N,</li>
+              <li>LATTITUDE:  76.9366° E</li>
+              
+              <li></li>
+              <li></li>
+          </ul>  
+            <!-- viewport scrolling text ends here -->
+        </div>
+          <!--viewport instructions starts here-->
+          <div class="viewport_instruction">
+            <span> >> USE MOUSE BUTTONS [SCROLL/GRAB/ZOOM] TO EXPLORE THE VIEWPORT [IIST]</span>
+          </div>
+          <!--viewport instructions ends here-->
         <canvas id="iist_viewport"></canvas>
       </div>
     </div>

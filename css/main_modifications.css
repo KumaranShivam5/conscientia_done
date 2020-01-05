@@ -1,0 +1,18 @@
+@media only screen and (max-width: 600px) {
+    .container-fluid{
+        position: absolute;
+        top:50vh;
+    }
+    #table{display:none;}
+    .main-header{text-align: left;}
+    .content{width:max-content;overflow-x: scroll;}
+    .cube-container{display: inline-flex;}
+    .intro-container{
+        width: 100%;
+        max-width: max-content;
+        padding: 0;
+        background: transparent;
+        overflow-x: scroll;
+    }
+    .main-header{padding:0px;}
+  }

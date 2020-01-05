@@ -25,11 +25,12 @@ canvas {
     src: url('../fonts/nasalization-rg.ttf');
   }
 .scroll_text{
-    color: #06fff58c;
-    font-weight: 100;
-    font-family: nasa;
-    font-variant: small-caps;
-    font-size: 2vh;
+  color: #4effdf;
+  font-weight: 100;
+  font-family: monospace;
+  font-variant: small-caps;
+  font-size: 2.3vh;
+  text-shadow: 0px 0px 3px #7effe7
 }
 
 
@@ -102,4 +103,25 @@ canvas {
 
 .event_card{
   
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    overflow-y: scroll;
+  }
+  canvas{
+    background-size: 0 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute !important;
+    top: -130vh !important;
+    right: 0px !important;
+    opacity: 0.2;
+  }
+  .screen, .grad_back, .grad_wrapper , .intro{
+    background: transparent !important;
+  }
+  #centeralign{
+    vertical-align: top;
+  }
 }
