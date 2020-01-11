@@ -8,9 +8,7 @@
   <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+  <meta name="keyword" content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -24,6 +22,17 @@
       padding: 2px;
     }
 
+    canvas {
+      background: url(images/border_rotated.png);
+      background-size: 100% 100%;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      top: 0vh !important;
+      right: 0px !important;
+      opacity: 0.9;
+
+    }
 
     .main_logo {
       position: absolute;
@@ -42,16 +51,51 @@
     .core {
       display: none !important;
     }
+
+    #timer {
+      color: white;
+    }
   </style>
 
   <!--style.css for menu circle-->
-  <link rel="stylesheet" href="./css/style.css?v=5.3">
-  <link rel="stylesheet" href="./css/main.css?v=2.0">
-  <link rel="stylesheet" href="./css/team_css/cube_display.css?v=5.2">
-  <link rel="stylesheet" href="./css/main_modifications.css?v=1.4">
-  <!--stylesheet for bottom information tabs-->
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/sci_fi_tab.css" type="text/css">
+  <link rel="stylesheet" href="./css/style.css?v=7.1">
+  <link rel="stylesheet" href="./css/main.css?v=8.0">
+  <link rel="stylesheet" href="./css/style_glitch.css?v=3.6">
+  <script src="http://threejs.org/build/three.min.js"></script>
+  <script src="./js/script_glitch.js?v=3.0"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+  <link rel="stylesheet" href="css/style_viewport_scroll.css?v=3.0" />
+  <style type="text/css">
+    .progress {
+      display: flex;
+      height: 1px;
+      overflow: visible;
+      font-size: .75rem;
+      background-color: #6e1f77;
+      border-radius: .25rem;
+      top: 50%;
+      position: relative;
+      width: 50%;
+      left: 25%;
+    }
+
+    .progress-bar {
+      display: block;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      color: #09fff5;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #00ffe7;
+      transition: width .6s ease;
+      height: 1px;
+      box-shadow: 0px 0px 5px 0px white;
+    }
+  </style>
 
 </head>
 
@@ -64,11 +108,8 @@
   <div class='grain'></div>
   <div class='intro'>
     <div class='center' style="z-index:10;">
-      <a href="index.html">
-        <div class='core'></div>
-        <div class="main_logo"></div>
-      </a>
-      
+      <div class='core'></div>
+      <div class="main_logo"></div>
       <div class='outer_one'>
         <div class='outer_one__piece'></div>
         <div class='outer_one__piece'></div>
@@ -260,8 +301,8 @@
         <div class='outer_five__piece'></div>
       </div>
       <div class='pieces'>
-        <div class='future_ui__piece' id="apex_button">
-          <span>APEX</span>
+        <div class='future_ui__piece'>
+          <span>Portal Conscientia</span>
           <div class='line'></div>
           <div class='tip'>
             enter..
@@ -270,7 +311,7 @@
 
         <div class='future_ui__piece'>
           <a href="events.html">
-            <span>CORE team</span>
+            <span>Events</span>
             <div class='line'></div>
             <div class='tip'>
               Beam me up!
@@ -281,54 +322,42 @@
 
 
         <div class='future_ui__piece'>
-          <span>Finance </span>
+          <span>Workshops</span>
           <div class='line'></div>
           <div class='tip'>
             Engineering!
           </div>
         </div>
-        <div class='future_ui__piece' id="web_button">
-          <span>WEB Team</span>
+        <div class='future_ui__piece'>
+          <span>Sponsors</span>
           <div class='line'></div>
           <div class='tip'>
-            alpha geeks..
+            Charge laz0rs!
           </div>
         </div>
         <div class='future_ui__piece'>
-          <span>EVENTS</span>
+          <a href="team.html"><span>Team</span></a>
           <div class='line'></div>
           <div class='tip'>
             Status report!
           </div>
         </div>
         <div class='future_ui__piece'>
-          <span>HOSPITALITY</span>
+          <span>Connect</span>
           <div class='line'></div>
           <div class='tip'>
             3
           </div>
         </div>
         <div class='future_ui__piece'>
-          <span>PUBLICITY</span>
+          <span>Login</span>
           <div class='line'></div>
           <div class='tip'>
             4
           </div>
         </div>
-        <div class='future_ui__piece'>
-            <span>CREATIVES</span>
-            <div class='line'></div>
-            <div class='tip'>
-              4
-            </div>
-        </div>
-        <div class='future_ui__piece'>
-            <span>DECO  Team</span>
-            <div class='line'></div>
-            <div class='tip'>
-              4
-            </div>
-        </div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
@@ -362,49 +391,35 @@
     </div>
   </div>
   <script src="./js/script.js"></script>
-  <!--Script for loading member details-->
-  <script>
-    //buttons ccan be found in .intro class div element-- on circular animated menu
-   $(document).ready(function(){
-     display_team('teams/apex.html');
-    $('#apex_button').click(function(){
-      display_team('teams/apex.html');
-    });
-    $('#web_button').click(function(){
-      display_team('teams/web.html');
-    });
-    $('#events_button').click(function(){
-      display_team('teams/events.html');
-    });
-    $('#hospi_button').click(function(){
-      display_team('teams/hospi.html');
-    });
-    $('#publi_button').click(function(){
-      display_team('teams/publi.html');
-    });
-    $('#deco_button').click(function(){
-      display_team('teams/deco.html');
-    });
-    function display_team(team){
-      $('#show_names').fadeOut('slow');
-      $('#show_names').load(team);
-      $('#show_names').fadeIn('slow');
-    }
-   });
-  </script>
-  <!--script for loading member details ends here-->
   <!--central _menu_visor_ends_here-->
   <div class="container-fluid" style="width:100vw;height:100vh;">
     <div class="row" style="height:50%;">
       <div class="col-lg-4"></div>
-      <!--top right cell-->
-      <div class="col-lg-8 grad_back" id="show_names">
-        
+      <div class="col-lg-8 grad_back" style="background: linear-gradient(45deg, #e720ff8a,#213c96 ,#2f8c94);
+      padding-right: 10px;
+      padding-left: 1px;">
+        <!--Script for countdown timer-->
+
+        <!-- partial:index.partial.html -->
+
+        <div class="screen glitch" style="background: black;">
+          <div class="clock is-off">
+              <span class="con-title" style="font-size: 3vh;">Conscientia-2020</span>
+            <span class="time" data-time=""></span>
+              <span class="date-fixed" style="font-size: 2vh;">29th FEB - 02 March<br>#hack_to_the_future</span>
+
+            </span></div>
+          <div id="timer"></div>
+          <div class="figure"></div>
+          <div class="figure-mask"></div>
+        </div>
+        <!-- partial -->
+
+        <!--script for countdown timer ends here-->
       </div>
-      <!--top right cell ends here-->
     </div>
     <div class="row" style="height:50vh;">
-      <div class="col-lg-4 align-text-bottom" style="align-self: flex-end;height:100%;">
+      <div class="col-lg-4 align-text-bottom" style="align-self: flex-end;height:auto;">
         <div class="grad_wrapper"></div>
 
         <div id="table">
@@ -421,14 +436,181 @@
           </div>
         </div>
       </div>
-      <!--bottom right container-->
-      <div class="col-lg-8" id="iist_viewport_div">
 
+      <div class="col-lg-8" id="iist_viewport_div">
+        <div class="viewport-text box">
+          <!-- viewport scrolling text -->
+          <ul>
+            <li>..VIEWPORT DISPLAYING....</li>
+            <li>INDIAN</li>
+            <li>INSTITUTE</li>
+            <li>OF</li>
+            <li>SPACE</li>
+            <li>SCIENCE</li>
+            <li>AND</li>
+            <li>TECHNOLOGY</li>
+            <li>THIRUVANANTHAPURAM</li>
+            <li>INDIA</li>
+            <li>LONGITUDE:8.5241° N,</li>
+            <li>LATTITUDE: 76.9366° E</li>
+
+            <li></li>
+            <li></li>
+          </ul>
+          <!-- viewport scrolling text ends here -->
+        </div>
+        <!--viewport instructions starts here-->
+        <div class="progress" id="progress">
+          <div class="progress-bar" role="progressbar" style="width:0%" id="progress_bar">
+            <span id="progress_bar_span" style="color:white;font-family: monospace;">0% Complete</span>
+          </div>
+        </div>
+        <div class="viewport_instruction">
+          <span style="font-family: monospace, nasa;"> >> USE MOUSE BUTTONS [SCROLL/GRAB/ZOOM] TO EXPLORE THE VIEWPORT
+            [IIST]</span>
+        </div>
+        <!--viewport instructions ends here-->
+        <canvas id="iist_viewport"></canvas>
       </div>
-      <!--bottom right container ends here-->
     </div>
   </div>
+  <!--WebGL script starts-->
+  <script>
+    var camera, scene, fogcolor;
+    camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2000);
+    var lookat_vector = new THREE.Vector3(0, 0, 0);
+    camera.lookAt(lookat_vector);
+    camera.position.set(0, 20, 80);
 
+    // scene
+
+    scene = new THREE.Scene();
+
+    const color = 0x6fffff;
+    const intensity = 1;
+    const light = new THREE.AmbientLight(color, intensity);
+    //const light = new THREE.DirectionalLight(color, intensity);
+    const light_point = new THREE.PointLight(0x3300FF, 50);
+    scene.add(light);
+    light_point.position.set(0, 0, 200)
+    scene.add(light_point);
+    //scene.add( ambientLight );
+
+    //camera.add( pointLight );
+    scene.add(camera);
+
+
+
+
+    var my_canvas = document.getElementById('iist_viewport');
+    var iist_viewport_div = document.querySelector('#iist_viewport_div');
+    var renderer = new THREE.WebGLRenderer({ canvas: my_canvas, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    iist_viewport_div.appendChild(renderer.domElement);
+    /*
+          
+            var iist;
+            
+            var loader = new THREE.OBJLoader();
+            loader.load( 'iist_complete_final_solid.obj',
+                        function( obj ){
+                                obj.traverse( function( child ) {
+                                        if ( child instanceof THREE.Mesh ) {
+                                                child.material = ship_material;
+                                                }
+                                        } );
+                                obj.position.set(0,0,0);
+                                obj.rotation.set(0,0,0);
+                                scene.add( obj );
+                                iist=obj;
+                                },
+                        function( xhr ){
+                            console.log( (xhr.loaded / xhr.total * 100) + "% loaded")
+                                },
+                        function( err ){
+                            console.error( "Error loading 'ship.obj'")
+                                }
+                        );
+    */
+    renderer.gammaOutput = true;
+    renderer.gammaFactor = 2.2;
+    var ship_material = new THREE.MeshLambertMaterial({ color: 0x6fffff, wireframe: true });
+    var loader = new THREE.GLTFLoader();
+    loader.load('iist_complete_trial_joined_V_7.glb',
+      function (gltf) {
+        gltf.scene.traverse(
+          function (child) {
+            if (child.isMesh) { child.material = ship_material; }
+
+          }
+        );
+        iist = gltf.scene;
+        iist.scale.set(0.8, 0.8, 0.8);
+        iist.position.set(0, -10, 0)
+        scene.add(iist);
+        gltf.camera;
+        //scene.add(gltf.camera);
+       // document.getElementById('progress').style.display = 'none';
+       document.getElementById('progress_bar_span').innerHTML = "Welcome to the domain of Future Tech,<br><span style='color:#3eff45;'>[use touch screen to grab/zoom/rotate/viewport]</span>";
+                 //document.getElementById('progress_bar').style.display='none';  
+
+      },
+      function (xhr) {
+
+        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+        document.getElementById('progress_bar').style.width = (xhr.loaded / xhr.total * 100) + '%';
+        document.getElementById('progress_bar_span').innerHTML = '[' + (xhr.loaded / xhr.total * 100) + '% .Future Domain...LOADED .<br>..(INITIALIZATION takes few min.)]'
+
+      },
+      // called when loading has errors
+      function (error) {
+
+        console.log('An error happened');
+
+      }
+
+    );
+
+    {
+
+      scene.fog = new THREE.Fog(0xffffff, 0.2, 1000);
+    }
+
+
+    /*
+    
+    window.addEventListener('mousemove', function (e) {
+        var mouse3D = new THREE.Vector3(
+            (event.clientX / window.innerWidth) * 150 - 75,
+            -10, 0);
+    
+        iist.lookAt(mouse3D);
+        //ship.lookAt(mouse3D);
+    });
+    
+    */
+
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      // cube.rotation.y += 0.01;
+      iist.rotation.y += 0.001;
+      //cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+  <!--WebGL script ends-->
   <!--typeset script-->
   <script>
 

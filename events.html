@@ -45,9 +45,9 @@
   </style>
 
   <!--style.css for menu circle-->
-  <link rel="stylesheet" href="./css/style.css?v=2.0">
+  <link rel="stylesheet" href="./css/style.css?v=5.2">
   <link rel="stylesheet" href="./css/main.css?v=2.0">
-  <link rel="stylesheet" href="./css/team_css/cube_display.css?v=1.2">
+  <link rel="stylesheet" href="./css/team_css/cube_display.css?v=5.2">
   <link rel="stylesheet" href="./css/main_modifications.css?v=1.4">
   <!--stylesheet for bottom information tabs-->
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
@@ -64,8 +64,11 @@
   <div class='grain'></div>
   <div class='intro'>
     <div class='center' style="z-index:10;">
-      <div class='core'></div>
-      <div class="main_logo"></div>
+      <a href="index.html">
+        <div class='core'></div>
+        <div class="main_logo"></div>
+      </a>
+      
       <div class='outer_one'>
         <div class='outer_one__piece'></div>
         <div class='outer_one__piece'></div>
@@ -257,17 +260,17 @@
         <div class='outer_five__piece'></div>
       </div>
       <div class='pieces'>
-        <div class='future_ui__piece' id="apex_button">
-          <span>APEX</span>
+        <div class='future_ui__piece' id="alpha_button">
+          <span>Alpha</span>
           <div class='line'></div>
           <div class='tip'>
             enter..
           </div>
         </div>
 
-        <div class='future_ui__piece'>
+        <div class='future_ui__piece' id="beta_button">
           <a href="events.html">
-            <span>CORE team</span>
+            <span>Beta</span>
             <div class='line'></div>
             <div class='tip'>
               Beam me up!
@@ -277,55 +280,26 @@
         </div>
 
 
-        <div class='future_ui__piece'>
-          <span>Finance </span>
+        <div class='future_ui__piece' id="gamma_button">
+          <span>gamma </span>
           <div class='line'></div>
           <div class='tip'>
             Engineering!
           </div>
         </div>
-        <div class='future_ui__piece' id="web_button">
-          <span>WEB Team</span>
+        <div class='future_ui__piece' id="delta_button">
+          <span>delta</span>
           <div class='line'></div>
           <div class='tip'>
             alpha geeks..
           </div>
         </div>
-        <div class='future_ui__piece'>
-          <span>EVENTS</span>
-          <div class='line'></div>
-          <div class='tip'>
-            Status report!
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <span>HOSPITALITY</span>
-          <div class='line'></div>
-          <div class='tip'>
-            3
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <span>PUBLICITY</span>
-          <div class='line'></div>
-          <div class='tip'>
-            4
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-            <span>CREATIVES</span>
-            <div class='line'></div>
-            <div class='tip'>
-              4
-            </div>
-        </div>
-        <div class='future_ui__piece'>
-            <span>DECO  Team</span>
-            <div class='line'></div>
-            <div class='tip'>
-              4
-            </div>
-        </div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        <div class='future_ui__piece blank'></div>
+        
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
@@ -363,25 +337,20 @@
   <script>
     //buttons ccan be found in .intro class div element-- on circular animated menu
    $(document).ready(function(){
-     display_team('teams/apex.html');
-    $('#apex_button').click(function(){
-      display_team('teams/apex.html');
+     display_team('events/event_alpha.html');
+    $('#alpha_button').click(function(){
+      display_team('events/alpha.html');
     });
-    $('#web_button').click(function(){
-      display_team('teams/web.html');
+    $('#beta_button').click(function(){
+      display_team('events/beta.html');
     });
-    $('#events_button').click(function(){
-      display_team('teams/events.html');
+    $('#gamma_button').click(function(){
+      display_team('events/gamma.html');
     });
-    $('#hospi_button').click(function(){
-      display_team('teams/hospi.html');
+    $('#delta_button').click(function(){
+      display_team('events/delta.html');
     });
-    $('#publi_button').click(function(){
-      display_team('teams/publi.html');
-    });
-    $('#deco_button').click(function(){
-      display_team('teams/deco.html');
-    });
+    
     function display_team(team){
       $('#show_names').fadeOut('slow');
       $('#show_names').load(team);

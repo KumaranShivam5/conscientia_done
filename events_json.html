@@ -4,7 +4,7 @@
 
 <head>
 
-  <title>Conscientia||2020</title>
+  <title>EVENTS || Conscientia||2020</title>
   <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -45,9 +45,9 @@
   </style>
 
   <!--style.css for menu circle-->
-  <link rel="stylesheet" href="./css/style.css?v=5.3">
+  <link rel="stylesheet" href="./css/style.css?v=5.2">
   <link rel="stylesheet" href="./css/main.css?v=2.0">
-  <link rel="stylesheet" href="./css/team_css/cube_display.css?v=5.2">
+  <link rel="stylesheet" href="./css/team_css/cube_display.css?v=2.0">
   <link rel="stylesheet" href="./css/main_modifications.css?v=1.4">
   <!--stylesheet for bottom information tabs-->
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
@@ -64,11 +64,8 @@
   <div class='grain'></div>
   <div class='intro'>
     <div class='center' style="z-index:10;">
-      <a href="index.html">
-        <div class='core'></div>
-        <div class="main_logo"></div>
-      </a>
-      
+      <div class='core'></div>
+      <div class="main_logo"></div>
       <div class='outer_one'>
         <div class='outer_one__piece'></div>
         <div class='outer_one__piece'></div>
@@ -362,46 +359,74 @@
     </div>
   </div>
   <script src="./js/script.js"></script>
-  <!--Script for loading member details-->
-  <script>
-    //buttons ccan be found in .intro class div element-- on circular animated menu
-   $(document).ready(function(){
-     display_team('teams/apex.html');
-    $('#apex_button').click(function(){
-      display_team('teams/apex.html');
-    });
-    $('#web_button').click(function(){
-      display_team('teams/web.html');
-    });
-    $('#events_button').click(function(){
-      display_team('teams/events.html');
-    });
-    $('#hospi_button').click(function(){
-      display_team('teams/hospi.html');
-    });
-    $('#publi_button').click(function(){
-      display_team('teams/publi.html');
-    });
-    $('#deco_button').click(function(){
-      display_team('teams/deco.html');
-    });
-    function display_team(team){
-      $('#show_names').fadeOut('slow');
-      $('#show_names').load(team);
-      $('#show_names').fadeIn('slow');
-    }
-   });
-  </script>
-  <!--script for loading member details ends here-->
+ 
   <!--central _menu_visor_ends_here-->
   <div class="container-fluid" style="width:100vw;height:100vh;">
     <div class="row" style="height:50%;">
       <div class="col-lg-4"></div>
       <!--top right cell-->
       <div class="col-lg-8 grad_back" id="show_names">
-        
+        <div class="intro-container">
+          <header class="main-header clearfix">
+            <h1 class="name">ALPHA
+              <span>event</span>
+            </h1>
+          </header>
+      
+          <div class="content clearfix">
+      
+            <div class="cube-container">
+              <div class="photo-cube">
+      
+                <img class="front" src="http://gdurl.com/PdNJ" alt="">
+                <div class="back photo-desc"  id="kumaran">
+                  <h3>SHIVAM KUMARAN</h3>
+                  <p>Cheif- cordinator</p>
+                  <a href="#" class="button">About me</a>
+                </div>
+                <img class="left" src="http://gdurl.com/zDJz" alt="">
+                <img class="right" src="http://gdurl.com/JLdx" alt="">
+      
+              </div>
+            </div>
+      
+          </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+              $('#kumaran').click(function(){
+                  $('#iist_viewport_div').load('teams/web/kumaran.html?v=1.1');
+              });
+            });
+        </script>
       </div>
       <!--top right cell ends here-->
+       <!--Script for loading member details-->
+  <script>
+    //buttons ccan be found in .intro class div element-- on circular animated menu
+    var xhr=new XMLHttpRequest();
+    var myObj;
+    xhr.onreadystatechange=function(){
+      if (this.readyState==4 && this.status==200){
+        var obj=JSON.parse(this.responseText);
+        console.log(obj);
+        myObj=obj;
+        do_something(obj);
+        
+      }
+    };
+    xhr.open('GET','events_details/event_alpha.json',true);
+    xhr.send();
+    console.log("loaded");
+    function do_something(obj){
+      console.log('inside do something function');
+      console.log(obj);
+      document.getElementById('kumaran').innerHTML=obj.event_alpha[0].name;
+    };
+    
+    //
+  </script>
+  <!--script for loading member details ends here-->
     </div>
     <div class="row" style="height:50vh;">
       <div class="col-lg-4 align-text-bottom" style="align-self: flex-end;height:100%;">

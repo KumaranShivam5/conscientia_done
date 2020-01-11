@@ -1,0 +1,37 @@
+{
+        "event_alpha":[
+            {   "name":"event_alpha_A", 
+                "logo_url":"alpha_a_logo",
+                "description":"alpha_a_description",
+                "coordinator":"alpha_a_cordinator",
+                "contact_no":"alpha_a_contact_no" 
+            },
+            {   "name":"event_alpha_B", 
+                "logo_url":"alpha_B_logo",
+                "description":"alpha_B_description",
+                "coordinator":"alpha_B_cordinator",
+                "contact_no":"alpha_B_contact_no" 
+            }
+    
+            ]
+        ,
+
+        "event_beta":[
+            {   "name":"event_beta_A", 
+                "logo_url":"beta_a_logo",
+                "description":"beta_a_description",
+                "coordinator":"beta_a_cordinator",
+                "contact_no":"beta_a_contact_no" 
+            },
+            {   "name":"event_beta_B", 
+                "logo_url":"beta_B_logo",
+                "description":"beta_B_description",
+                "coordinator":"beta_B_cordinator",
+                "contact_no":"beta_B_contact_no" 
+            }
+    
+            ]
+        
+
+
+}

@@ -124,4 +124,6 @@ canvas {
   #centeralign{
     vertical-align: top;
   }
+  .con-title{display:none !important;}
+  .date-fixed{display:none !important;}
 }
