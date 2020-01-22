@@ -1,0 +1,31 @@
+<div class="intro-container">
+    <header class="main-header clearfix">
+      <h1 class="name">CREATIVES
+        <span>Team</span>
+      </h1>
+    </header>
+
+    <div class="content clearfix">
+
+      <div class="cube-container" style="float:left;">
+        <div class="photo-cube">
+
+          <img class="front" src="teams/harish.jpg" alt="">
+          <div class="back photo-desc"  id="harish">
+            <h3>Harish S</h3>
+            <p>Coordinator</p>
+            <a href="#" class="button">About me</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+        $('#harish').click(function(){
+            $('#iist_viewport_div').load('teams/creatives/harish.html?v=1.1');
+        });
+      });
+  </script>

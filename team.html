@@ -268,19 +268,16 @@
           </div>
         </div>
 
-        <div class='future_ui__piece'>
-          <a href="events.html">
+        <div class='future_ui__piece' id="core_button">
             <span>CORE team</span>
             <div class='line'></div>
             <div class='tip'>
               Beam me up!
             </div>
-          </a>
-
         </div>
 
 
-        <div class='future_ui__piece'>
+        <div class='future_ui__piece' id="finance_button">
           <span>Finance </span>
           <div class='line'></div>
           <div class='tip'>
@@ -301,7 +298,7 @@
             Status report!
           </div>
         </div>
-        <div class='future_ui__piece'>
+        <div class='future_ui__piece' id="hospi_button">
           <span>HOSPITALITY</span>
           <div class='line'></div>
           <div class='tip'>
@@ -315,14 +312,14 @@
             4
           </div>
         </div>
-        <div class='future_ui__piece'>
+        <div class='future_ui__piece' id="creatives_button">
             <span>CREATIVES</span>
             <div class='line'></div>
             <div class='tip'>
               4
             </div>
         </div>
-        <div class='future_ui__piece'>
+        <div class='future_ui__piece' id="deco_button">
             <span>DECO  Team</span>
             <div class='line'></div>
             <div class='tip'>
@@ -366,12 +363,18 @@
   <script>
     //buttons ccan be found in .intro class div element-- on circular animated menu
    $(document).ready(function(){
-     display_team('teams/apex.html');
+     display_team('teams/apex_12.html');
     $('#apex_button').click(function(){
-      display_team('teams/apex.html');
+      display_team('teams/apex_12.html');
     });
     $('#web_button').click(function(){
       display_team('teams/web.html');
+    });
+    $('#finance_button').click(function(){
+      display_team('teams/finance.html');
+    });
+    $('#core_button').click(function(){
+      display_team('teams/core.html');
     });
     $('#events_button').click(function(){
       display_team('teams/events.html');
@@ -379,11 +382,14 @@
     $('#hospi_button').click(function(){
       display_team('teams/hospi.html');
     });
-    $('#publi_button').click(function(){
+    $('#publicty_button').click(function(){
       display_team('teams/publi.html');
     });
     $('#deco_button').click(function(){
       display_team('teams/deco.html');
+    });
+    $('#creatives_button').click(function(){
+      display_team('teams/creatives.html');
     });
     function display_team(team){
       $('#show_names').fadeOut('slow');

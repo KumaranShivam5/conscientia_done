@@ -1,0 +1,50 @@
+<div class="intro-container">
+    <header class="main-header clearfix">
+      <h1 class="name">DECO
+        <span>Team</span>
+      </h1>
+    </header>
+
+    <div class="content clearfix">
+
+      <div class="cube-container" style="float:left;">
+        <div class="photo-cube">
+
+          <img class="front" src="teams/sowmya.jpg" alt="">
+          <div class="back photo-desc"  id="sowmya">
+            <h3>Sowmya Kodem</h3>
+            <p>coordinator</p>
+            <a href="#" class="button">About me</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="cube-container" style="float:left;">
+        <div class="photo-cube">
+
+          <img class="front" src="teams/rahul.jpg" alt="">
+          <div class="back photo-desc"  id="rahul">
+            <h3>Priyadarshini</h3>
+            <p>Vice Cheif coordinator</p>
+            <a href="#" class="button">About me</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+        $('#iist_viewport_div').load('teams/deco/sowmya.html?v=1.1');
+        $('#sowmya').click(function(){
+          
+            $('#iist_viewport_div').load('teams/deco/sowmya.html?v=1.1');
+        });
+        $('#rahul').click(function(){
+          
+          $('#iist_viewport_div').load('teams/deco/rahul.html?v=1.1');
+      });
+        
+      });
+  </script>
