@@ -1,0 +1,51 @@
+.cell{
+    display: block;
+    font-size: 2vh;
+    /* margin: 5px; */
+    background: linear-gradient(90deg, transparent , black , transparent);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+}
+.cell-title{
+font-family:nasa !important;
+font-size: 7vh;
+}
+.cell-detail{
+font-family:monospace !important;
+}
+.con-logo{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 20vh;
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: 1.5vh;
+    font-family: nasa;
+    color: #00ffff94;
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .con-logo{display: none;}
+    .workshop-logo{display:none;}
+    nav ul li{
+        width: 12vh !important;
+    height: 12vh !important;
+    border-radius: 5% !important;
+    }
+    nav.active ul{
+        transition:0.5s;
+        background-color:black;
+        width:100vw;
+        margin-left: 0px;
+        background: linear-gradient(90deg, black, transparent);
+        padding-left :0px;
+    }
+    .cell{background:#000000ad !important;}
+    .cell-title{font-size:5vh;}
+}
