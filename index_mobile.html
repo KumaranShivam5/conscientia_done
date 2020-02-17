@@ -7,6 +7,9 @@
   <title>Conscientia||2020</title>
   <link rel="icon" href="images/logo.png">
   <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="keyword" content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -58,14 +61,11 @@
   </style>
 
   <!--style.css for menu circle-->
-  <link rel="stylesheet" href="./css/style.css?v=7.1">
+  <link rel="stylesheet" href="./css/style_mobile.css?v=8.1">
   <link rel="stylesheet" href="./css/main.css?v=8.0">
   <link rel="stylesheet" href="./css/style_glitch.css?v=3.6">
-  <script src="http://threejs.org/build/three.min.js"></script>
+  
   <script src="./js/script_glitch.js?v=3.0"></script>
-  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
-  <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
   <link rel="stylesheet" href="css/style_viewport_scroll.css?v=3.0" />
   <style type="text/css">
     .progress {
@@ -302,60 +302,58 @@
       </div>
       <div class='pieces'>
         <div class='future_ui__piece'>
-          <span>Portal Conscientia</span>
-          <div class='line'></div>
-          <div class='tip'>
-            enter..
-          </div>
+            <a href="#" id="login" style="text-decoration:none;color:white;"><span>LOGIN</span></a>
+            <div class='line'></div>
+           
         </div>
 
         <div class='future_ui__piece'>
-          <a href="events.html">
-            <span>Events</span>
+            <a href="#">
+                <span><a href="events_v2.html?v=7.5" style="color:white;">Events</a></span>
+                <div class='line'></div>
+                <div class='tip'>
+                    Beam me up!
+                </div>
+            </a>
+
+        </div>
+
+
+        <div class='future_ui__piece'>
+
+            <span><a href="workshop_page.html" style="color:white;">Workshops</a></span>
+
             <div class='line'></div>
             <div class='tip'>
-              Beam me up!
+                expand..!
             </div>
-          </a>
+        </div>
+        <div class='future_ui__piece'>
 
-        </div>
+            <span><a href="threempt.html?v=8.5" style="color:white;">3 MPT</a></span>
 
+            <div class='line'></div>
+            <div class='tip'>
+                innovate..!
+            </div>
+        </div>
+        
+        <div class='future_ui__piece'>
+            <a href="team.html?v=11.0"><span>Team</span></a>
+            <div class='line'></div>
+            
+        </div>
+        
+        <div class='future_ui__piece'>
+            <span>Connect</span>
+            <div class='line'></div>
+            <div class='tip'>
+                3
+            </div>
+        </div>
+       
 
-        <div class='future_ui__piece'>
-          <span>Workshops</span>
-          <div class='line'></div>
-          <div class='tip'>
-            Engineering!
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <span>Sponsors</span>
-          <div class='line'></div>
-          <div class='tip'>
-            Charge laz0rs!
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <a href="team.html"><span>Team</span></a>
-          <div class='line'></div>
-          <div class='tip'>
-            Status report!
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <span>Connect</span>
-          <div class='line'></div>
-          <div class='tip'>
-            3
-          </div>
-        </div>
-        <div class='future_ui__piece'>
-          <span>Login</span>
-          <div class='line'></div>
-          <div class='tip'>
-            4
-          </div>
-        </div>
+        
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
@@ -387,7 +385,7 @@
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
         <div class='future_ui__piece blank'></div>
-      </div>
+    </div>
     </div>
   </div>
   <script src="./js/script.js"></script>
@@ -475,141 +473,7 @@
     </div>
   </div>
   <!--WebGL script starts-->
-  <script>
-    var camera, scene, fogcolor;
-    camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2000);
-    var lookat_vector = new THREE.Vector3(0, 0, 0);
-    camera.lookAt(lookat_vector);
-    camera.position.set(0, 20, 80);
-
-    // scene
-
-    scene = new THREE.Scene();
-
-    const color = 0x6fffff;
-    const intensity = 1;
-    const light = new THREE.AmbientLight(color, intensity);
-    //const light = new THREE.DirectionalLight(color, intensity);
-    const light_point = new THREE.PointLight(0x3300FF, 50);
-    scene.add(light);
-    light_point.position.set(0, 0, 200)
-    scene.add(light_point);
-    //scene.add( ambientLight );
-
-    //camera.add( pointLight );
-    scene.add(camera);
-
-
-
-
-    var my_canvas = document.getElementById('iist_viewport');
-    var iist_viewport_div = document.querySelector('#iist_viewport_div');
-    var renderer = new THREE.WebGLRenderer({ canvas: my_canvas, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    iist_viewport_div.appendChild(renderer.domElement);
-    /*
-          
-            var iist;
-            
-            var loader = new THREE.OBJLoader();
-            loader.load( 'iist_complete_final_solid.obj',
-                        function( obj ){
-                                obj.traverse( function( child ) {
-                                        if ( child instanceof THREE.Mesh ) {
-                                                child.material = ship_material;
-                                                }
-                                        } );
-                                obj.position.set(0,0,0);
-                                obj.rotation.set(0,0,0);
-                                scene.add( obj );
-                                iist=obj;
-                                },
-                        function( xhr ){
-                            console.log( (xhr.loaded / xhr.total * 100) + "% loaded")
-                                },
-                        function( err ){
-                            console.error( "Error loading 'ship.obj'")
-                                }
-                        );
-    */
-    renderer.gammaOutput = true;
-    renderer.gammaFactor = 2.2;
-    var ship_material = new THREE.MeshLambertMaterial({ color: 0x6fffff, wireframe: true });
-    var loader = new THREE.GLTFLoader();
-    loader.load('iist_complete_trial_joined_V_7.glb',
-      function (gltf) {
-        gltf.scene.traverse(
-          function (child) {
-            if (child.isMesh) { child.material = ship_material; }
-
-          }
-        );
-        iist = gltf.scene;
-        iist.scale.set(0.8, 0.8, 0.8);
-        iist.position.set(0, -10, 0)
-        scene.add(iist);
-        gltf.camera;
-        //scene.add(gltf.camera);
-       // document.getElementById('progress').style.display = 'none';
-       document.getElementById('progress_bar_span').innerHTML = "Welcome to the domain of Future Tech,<br><span style='color:#3eff45;'>[use touch screen to grab/zoom/rotate/viewport]</span>";
-                 //document.getElementById('progress_bar').style.display='none';  
-
-      },
-      function (xhr) {
-
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-        document.getElementById('progress_bar').style.width = (xhr.loaded / xhr.total * 100) + '%';
-        document.getElementById('progress_bar_span').innerHTML = '[' + (xhr.loaded / xhr.total * 100) + '% .Future Domain...LOADED .<br>..(INITIALIZATION takes few min.)]'
-
-      },
-      // called when loading has errors
-      function (error) {
-
-        console.log('An error happened');
-
-      }
-
-    );
-
-    {
-
-      scene.fog = new THREE.Fog(0xffffff, 0.2, 1000);
-    }
-
-
-    /*
-    
-    window.addEventListener('mousemove', function (e) {
-        var mouse3D = new THREE.Vector3(
-            (event.clientX / window.innerWidth) * 150 - 75,
-            -10, 0);
-    
-        iist.lookAt(mouse3D);
-        //ship.lookAt(mouse3D);
-    });
-    
-    */
-
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    window.addEventListener('resize', onWindowResize, false);
-
-    function onWindowResize() {
-      windowHalfX = window.innerWidth / 2;
-      windowHalfY = window.innerHeight / 2;
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      // cube.rotation.y += 0.01;
-      iist.rotation.y += 0.001;
-      //cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-  </script>
+ 
   <!--WebGL script ends-->
   <!--typeset script-->
   <script>
@@ -647,8 +511,35 @@
       typeEffect(p, speed);
     }, delay);
 
+
+
+    $(document).ready(function () {
+            var x = getCookie("profdata");
+            //console.log(data);
+            console.log("dash function run");
+            if (x != "") {
+                var data = JSON.parse(x);
+                var name = data.Name.split(" ");
+                $("#login span").html("<a href='dashboard.html' style='color:white;text-decoration:none;text-transform:uppercase;'>" + name[0] + "</a>");
+                console.log("function run inside if");
+            }
+            else {
+                $("#login span").html("<a href='login_v3.html' style='color:white;text-decoration:none;'>LOGIN</a>");
+                $("login span").css("color","white");
+                console.log("inside else");
+            }
+
+        });
   </script>
   <!--typeset script ends-->
+  <div style="color:white;font-family:monospace;font-size:2vh;position:fixed;top:10px;right:20px;z-index:99999999999;">
+        <a href="workshop_page.html" style="color:white;">
+            Workshop Registeration is live
+        </a><br>
+        <a href="threempt.html" style="color:white;">
+         Register for 3-MPT
+        </a>
+    </div>
 </body>
 
 </html>

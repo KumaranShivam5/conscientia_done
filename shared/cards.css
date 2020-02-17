@@ -1,0 +1,42 @@
+body{
+    overflow-y:scroll !important;
+    overflow-x:hidden !important;
+    background:black;
+}
+.main-wrapper{
+padding-top:10vh;
+}
+
+canvas{position:fixed !important;}
+
+.card{
+margin-bottom:2vh;
+border-left: 1px solid #ff0047;
+background:#000000c2 !important;
+}
+.card-title{
+    font-size: 4vh;
+    font-family: monospace;
+    font-weight: bold;
+    
+}
+.card-text{
+    font-size: 1.5rem;
+    font-family: monospace;
+    font-family: monospace;
+    margin-bottom: 10px;
+    color: #00ffdc8f;
+    text-align:justify;
+}
+.btn{
+    margin: 6px;
+    font-size: 2vh;
+    background: transparent;
+    border: 1px solid cyan;
+}
+
+@media only screen and (min-width:600px){
+    .main-wrapper{
+
+    }
+}

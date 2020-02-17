@@ -8,15 +8,20 @@
     <script type="text/javascript">
         
         if (screen.width <= 600) {
-        document.location = "index_mobile.html";
+            document.location = "index_mobile.html?v=21.0";
         }
         
-        </script>
+    </script>
+        <!--UPDATED on 08 /02/2020-->
     <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="keyword"
-        content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
+        content="IIST indian institute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -134,15 +139,15 @@
             padding-left: 2px !important;
             border-right: 1px solid white !important;
         }
-        .footer{
 
-        }
-        .box{
-            top:0px !important;
+        .footer {}
+
+        .box {
+            top: 0px !important;
             right: 0px !important;
         }
     </style>
-
+    <script src="shared/create_dash.js"></script>
 </head>
 
 <body>
@@ -350,16 +355,14 @@
                         </div>
                         <div class='pieces'>
                             <div class='future_ui__piece'>
-                                <span>Portal Conscientia</span>
+                                <a href="#" id="login" style="text-decoration:none;color:white;"><span>LOGIN</span></a>
                                 <div class='line'></div>
-                                <div class='tip'>
-                                    enter..
-                                </div>
+                               
                             </div>
 
                             <div class='future_ui__piece'>
-                                <a href="events.html">
-                                    <span>Events</span>
+                                <a href="#">
+                                    <span><a href="events_v2.html?v=7.5" style="color:white;">Events</a></span>
                                     <div class='line'></div>
                                     <div class='tip'>
                                         Beam me up!
@@ -370,26 +373,30 @@
 
 
                             <div class='future_ui__piece'>
-                                <span>Workshops</span>
+
+                                <span><a href="workshop_page.html" style="color:white;">Workshops</a></span>
+
                                 <div class='line'></div>
                                 <div class='tip'>
-                                    Engineering!
+                                    expand..!
                                 </div>
                             </div>
                             <div class='future_ui__piece'>
-                                <span>Sponsors</span>
+
+                                <span><a href="threempt.html?v=8.5" style="color:white;">3 MPT</a></span>
+
                                 <div class='line'></div>
                                 <div class='tip'>
-                                    Charge laz0rs!
+                                    innovate..!
                                 </div>
                             </div>
+                            
                             <div class='future_ui__piece'>
-                                <a href="team.html"><span>Team</span></a>
+                                <a href="team.html?v=11.0"><span>Team</span></a>
                                 <div class='line'></div>
-                                <div class='tip'>
-                                    Status report!
-                                </div>
+                                
                             </div>
+                            
                             <div class='future_ui__piece'>
                                 <span>Connect</span>
                                 <div class='line'></div>
@@ -397,13 +404,9 @@
                                     3
                                 </div>
                             </div>
-                            <div class='future_ui__piece'>
-                                <span>Login</span>
-                                <div class='line'></div>
-                                <div class='tip'>
-                                    4
-                                </div>
-                            </div>
+                           
+
+                            
                             <div class='future_ui__piece blank'></div>
                             <div class='future_ui__piece blank'></div>
                             <div class='future_ui__piece blank'></div>
@@ -467,77 +470,70 @@
             <!--front glitch ends-->
             <!--right side quote-->
             <div class="col-sm-3">
-               <div class="row">
-                   <div class="col">
-                    <div id="table">
-                        <div id="centeralign">
-                            <h1 id="head_para"></h1>
-                            <p class="align-middle scroll_text" id="para">
-                                Conscientia, IIST, one of the largest technical fests of South India provides a platform for
-                                one
-                                and all
-                                to witness one of the most exuberant and groundbreaking amalgamations of space science and
-                                technology with
-                                pure delight and ebullience. With a plethora of events like motivating orations, state of
-                                the
-                                art
-                                technological exhibitions, cut-throat competitions and breathtaking performances for its
-                                audience, the
-                                four day extravaganza challenges you to step out of your comfort zone and ?challenge the
-                                school
-                                of
-                                conventional thinking. Come, join us for Conscientia and rediscover the unknown potential in
-                                you.
-                            </p>
-                        </div>
+                <div id="table">
+                    <div id="centeralign">
+                        <h1 id="head_para"></h1>
+                        <p class="align-middle scroll_text" id="para">
+                            Conscientia, IIST, one of the largest technical fests of South India provides a platform for
+                            one
+                            and all
+                            to witness one of the most exuberant and groundbreaking amalgamations of space science and
+                            technology with
+                            pure delight and ebullience. With a plethora of events like motivating orations, state of
+                            the
+                            art
+                            technological exhibitions, cut-throat competitions and breathtaking performances for its
+                            audience, the
+                            four day extravaganza challenges you to step out of your comfort zone and ?challenge the
+                            school
+                            of
+                            conventional thinking. Come, join us for Conscientia and rediscover the unknown potential in
+                            you.
+                        </p>
                     </div>
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="col">
-                       <img src="space_up/spaceup2020/spaceup-website/img/logo.png">
-                   </div>
-               </div>
+                </div>
             </div>
             <!--right side quotes ends here-->
         </div>
         <div class="row" style="height:10vh;max-height:200px;font-family: monospace;
         font-size: 1.3vh;">
             <div class="col-lg-2">
-                    <div class="viewport-text box">
-                            <!-- viewport scrolling text -->
-                            <ul>
-                              <li>..VIEWPORT DISPLAYING....</li>
-                              <li>INDIAN</li>
-                              <li>INSTITUTE</li>
-                              <li>OF</li>
-                              <li>SPACE</li>
-                              <li>SCIENCE</li>
-                              <li>AND</li>
-                              <li>TECHNOLOGY</li>
-                              <li>THIRUVANANTHAPURAM</li>
-                              <li>INDIA</li>
-                              <li>LONGITUDE:8.5241° N,</li>
-                              <li>LATTITUDE: 76.9366° E</li>
-                  
-                              <li></li>
-                              <li></li>
-                            </ul>
-                            <!-- viewport scrolling text ends here -->
-                    </div>
-             </div>
+                <div class="viewport-text box">
+                    <!-- viewport scrolling text -->
+                    <ul>
+                        <li>..VIEWPORT DISPLAYING....</li>
+                        <li>INDIAN</li>
+                        <li>INSTITUTE</li>
+                        <li>OF</li>
+                        <li>SPACE</li>
+                        <li>SCIENCE</li>
+                        <li>AND</li>
+                        <li>TECHNOLOGY</li>
+                        <li>THIRUVANANTHAPURAM</li>
+                        <li>INDIA</li>
+                        <li>LONGITUDE:8.5241° N,</li>
+                        <li>LATTITUDE: 76.9366° E</li>
+
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <!-- viewport scrolling text ends here -->
+                </div>
+            </div>
             <div class="col-lg-8" style="border-right: 2px solid #d367ff;
             border-left: 2px solid #d367ff;">
                 <div class="footer">
                     <div class="progress" id="progress">
                         <div class="progress-bar" role="progressbar" style="width:0%" id="progress_bar">
-                          <span id="progress_bar_span" style="color:white;font-family: monospace;font-size:1.5vh;">0% Complete</span>
+                            <span id="progress_bar_span" style="color:white;font-family: monospace;font-size:1.5vh;">0%
+                                Complete</span>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
-            <div class="col-lg-2">Designed_by_WEB_Team <br>
+            <div class="col-lg-2"><a style="color:white;"
+                    href="https://github.com/KumaranShivam5">Designed_by_WEB_Team</a> <br>
                 &copy Conscientia-2020, IIST, Thiruvananthapuram
             </div>
         </div>
@@ -620,7 +616,7 @@
                 gltf.camera;
                 //scene.add(gltf.camera);
                 document.getElementById('progress_bar_span').innerHTML = "Welcome to the domain of Future Tech, <br>Welcome to INDIAN INSTITUTE OF SPACE SCIENCE AND TECHNOLOGY <br><span style='color:#3eff45;'>[use mouse button to grab/zoom/rotate/viewport]</span>";
-                 //document.getElementById('progress_bar').style.display='none';   
+                //document.getElementById('progress_bar').style.display='none';   
             },
             function (xhr) {
 
@@ -714,8 +710,36 @@
             typeEffect(p, speed);
         }, delay);
 
+
+
+        $(document).ready(function () {
+            var x = getCookie("profdata");
+            //console.log(data);
+            console.log("dash function run");
+            if (x != "") {
+                var data = JSON.parse(x);
+                var name = data.Name.split(" ");
+                $("#login span").html("<a href='dashboard.html' style='color:white;text-decoration:none;text-transform:uppercase;'>" + name[0] + "</a>");
+                console.log("function run inside if");
+            }
+            else {
+                $("#login span").html("<a href='login_v3.html' style='color:white;text-decoration:none;'>LOGIN</a>");
+                $("login span").css("color","white");
+                console.log("inside else");
+            }
+
+        });
     </script>
     <!--typeset script ends-->
+    <div
+        style="color:white;font-family:monospace;font-size:2vh;position:fixed;top:10px;right:20px;z-index:99999999999;">
+        <a href="workshop_page.html">
+            Workshop Registeration is live
+        </a><br>
+        <a href="threempt.html">
+            Register for 3 MPT now!.
+        </a>
+    </div>
 </body>
 
 </html>

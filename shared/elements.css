@@ -1,0 +1,155 @@
+.universal-button {
+    padding: 10px;
+    width: 100%;
+    background: #0000008c;
+    colo: cyan;
+    color: white;
+    font-family: nasa;
+    border-left: 4px solid crimson;
+    border-right: 10px solid crimson;
+    border-top: 1px dashed crimson;
+    border-bottom: 1px dashed crimson;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.universal-button:hover {
+    background: black;
+}
+
+.center-popup-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    background: transparent;
+    top: 0px;
+    left: -100%;
+}
+
+.popup {}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    padding: 15px;
+    border-left: 4px solid crimson;
+    border-right: 12px solid crimson;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#login {
+    border-left: 4px solid crimson !important;
+    border-right: 10px solid crimson !important;
+    border-top: 1px dashed crimson !important;
+    border-bottom: 1px dashed crimson !important;
+}
+
+.detail-item {}
+
+.loader-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 0vh;
+    backdrop-filter: blur(5px);
+    background: transparent;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.loader-wrapper .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10vh;
+    height: 10vh;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    animation: rotate 2s linear infinite;
+}
+
+.loader-wrapper .loader::before {
+    content="";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8.5vh;
+    height: 8.5vh;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.2s all;
+    transform: translate(-50%, -50%);
+    animation: rotate 1.2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.title-large-flat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 10vh;
+}
+
+.title-small-flat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 5vh;
+}
+
+.desc-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 5vh;
+    justify-content: center;
+}
+
+.desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.5vh;
+}
+
+.flat-button {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.copyright {
+    mix-blend-mode: difference;
+    font-size: 1.2vh;
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    right: 10px;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .title-large-flat{
+        font-size:6vh;
+    }
+}

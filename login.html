@@ -1,25 +1,79 @@
 <!doctype html>
 <html>
-    <head>
-        <title>LOGIN/Register || Conscientia 2020|| IIST</title>
-        <link rel="stylesheet" type="text/css" href="css/login.css?v=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+
+<head>
+    <title>LOGIN/Register || Conscientia 2020|| IIST</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css?v=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6"></div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="login_files/login_con.js"></script>
+</head>
+
+<body>
+    <div class="reg-wrapper">
+        <form onsubmit="return false">
+
+            <h3>Register</h3>
+            <div class="form-holder">
+                <span class="lnr lnr-user"></span>
+                <input type="text" class="form-control" placeholder="Name" id="name" required="">
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    
-                </div>
+            <div class="form-holder">
+                <span class="lnr lnr-phone-handset"></span>
+                <input type="text" class="form-control" placeholder="Phone Number" id="no" required="">
             </div>
-        </div>
-    </body>
+            <div class="form-holder">
+                <span class="lnr lnr-envelope"></span>
+                <input type="text" class="form-control" placeholder="E-mail ID" id="em" required="">
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-graduation-hat"></span>
+                <input type="text" class="form-control" placeholder="College" id="col" required="">
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-lock"></span>
+                <input type="password" class="form-control" placeholder="Password" id="pwd" required="">
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-lock"></span>
+                <input type="password" class="form-control" placeholder="Confirm Password" id="cpwd" required="">
+            </div>
+            <button id="register">
+                <span>Register</span>
+            </button>
+            <br>
+            <p class="gtl" id="statusr"></p>
+            <br>
+            <h4 class="gtl" onclick="loadlogin()" style="cursor:pointer"><u>Already have an account?</u></h4>
+        </form> <br>
+    </div>
+
+    <div class="login-wrapper">
+        <form onsubmit="return false">
+
+            <h3>Login</h3>
+            <div class="form-holder">
+                <span class="lnr lnr-envelope"></span>
+                <input type="text" class="form-control" placeholder="E-mail ID or Dhanak ID" id="eml" required="">
+            </div>
+            <div class="form-holder">
+                <span class="lnr lnr-lock"></span>
+                <input type="password" class="form-control" placeholder="Password" id="pwdl" required="">
+            </div>
+            <button type="submit" id="login">
+                <span id="logbut">Login</span>
+            </button>
+            <br>
+            <p class="gtr" id="statusl"></p>
+            <br>
+            <h4 class="gtr" onclick="loadregister()" style="cursor:pointer"><u>Don't have an account?</u></h4>
+        </form>
+    </div>
+    <span id="check_cookie">check</span>
+</body>
+
 </html>

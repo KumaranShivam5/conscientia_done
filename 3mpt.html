@@ -1,0 +1,338 @@
+<html>
+
+<head>
+
+    <title>3MPT||Conscientia||2020</title>
+
+    <link rel="icon" href="images/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keyword"
+        content="three minute presentation , ieee, IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!--script for full page scrolling-->
+
+    <link rel="stylesheet" href="ieee_assets/css/style_ieee.css?v=5.4">
+    <link rel="stylesheet" href="dist/workshop_assets/style.css?v=2.0">
+    <link rel="stylesheet" href="shared/cards.css">
+
+
+    <script src="http://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+    <style type="text/css">
+        canvas {
+            position: absolute;
+            top: 0px;
+            z-index: -10;
+            opacity: 0.5;
+        }
+
+        .section {
+            background: transparent !important;
+            color: white !important;
+        }
+    </style>
+    <link rel="stylesheet" href="ieee_assets/css/style.css?v=13.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap" rel="stylesheet">
+    
+</head>
+
+<body onload="main_menu_close()">
+    <!--nav bar starts here-->
+    <!--MENU optimization for mobil site is in ieee_assets/css/style_ieee.css-->
+
+    <div class="container main-menu main-menu-closed">
+        <div class="row justify-content-center">
+            <div class="col blank"></div>
+            <a class="col content" href="home.aspx?v=7.5"><span>Home</span></a>
+            <a class="col content" href="events_v2.html?v=7.5"><span>Events</span></a>
+            <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
+            <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
+            
+            <a class="col content" href="login.html?v=7.5"><span>Login</span></a>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank" ></div>
+            <div class="col blank"></div>
+        </div>
+    </div>
+    <a id="menu-button" href="#">
+        <span></span>
+    </a>
+    <script>
+        var flag = 0;
+        $("#menu-button").click(function () {
+            if (flag == 0) {
+                main_menu_open();
+            }
+            else {
+                main_menu_close();
+            }
+        });
+        function main_menu_open() {
+            $("#menu-button span").addClass("on");
+            flag = 1;
+            $(".main-menu").removeClass("main-menu-closed");
+            $(".main-menu").addClass("main-menu-open");
+
+        }
+        function main_menu_close() {
+            $("#menu-button span").removeClass("on");
+            flag = 0;
+            $(".main-menu").removeClass("main-menu-open");
+            $(".main-menu").addClass("main-menu-closed");
+        }
+
+    </script>
+
+    <!--navbar ends here-->
+
+    <div class="container main-wrapper">
+        <div class="row">
+            <div class="col-lg-12 cell-title">3MPT</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 cell-title" style="font-size:3vh;border-bottom: 1px solid #ff0047;
+            margin-bottom: 30px;">(3 MINUTE PROJECT THESIS COMPETITION)</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
+                <div class="card" style="background-color:black;">
+                    <img class="card-img-top" src="images/ieee_flat.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">IEEE</h5>
+                        <p class="card-text">IEEE Student Branch- IIST and <span class="hlt">CONSCIENTIA-2020</span> in association IEEE
+                            APS Kerala Chapter, IEEE MTT-S Kerala Chapter and IEEE IAS Kerala
+                            Chapter invites Undergraduate (B.Tech) and Postgraduate (M.Tech)
+                            students, to participate in "3 Minute Project Thesis Competition (3-
+                            MPT)“ in Electrical-Electronics and Computer Engineering, and
+                            showcase their technical paper presentation skills and innovative
+                            projects.</p>
+                        <a href="http://conscientia.co.in/docs/3MPT_IIST_IEEE.pdf" target="blank" class="btn btn-primary">Know more</a><br>
+                        <a href="https://forms.gle/3SJdMjhVntchrjmAA"  target="blank" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                
+            </div>
+          
+            <div class="col-sm-12 col-lg-4">
+
+                <div class="card" style="background-color:black;">
+                    <img class="card-img-top" src="images/SPIE-OSA.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">SPIE</h5>
+                        <p class="card-text">SPIE Student Chapter- IIST and OSA Student Chapter - IIST in
+                            association with CONSCIENTIA-2020 invites Undergraduates
+                            (B.Tech) and Postgraduates (M.Tech – PhD), to participate in
+                            "3 Minute Project Thesis Competition (3-MPT)“, and showcase
+                            their technical paper presentation skills and innovative projects
+                            on “Applied Optics or Adaptive Optics or Quantum Optics”</p>
+                        <a href="http://conscientia.co.in/docs/3MPT_IIST_SPIE.pdf" class="btn btn-primary"  target="blank">Know more</a><br>
+                        <a href="https://forms.gle/McvQ8Vahn9maBmZg7"  target="blank" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+
+                <div class="card" style="background-color:black;">
+                    <img class="card-img-top" src="images/MRSI.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">MRSI</h5>
+                        <p class="card-text">MRSI Thiruvananthapuram Chapter in association with
+                            CONSCIENTIA-2020 invites Undergraduates (B.Tech) and
+                            Postgraduates (M.Tech - PhD), to participate in
+                            "3 Minute Project Thesis Competition (3-MPT)“ and showcase
+                            their technical paper presentation skills and innovative projects
+                            on “Recent trends in Material Science and Manufacturing”.</p>
+                        <a href="http://conscientia.co.in/docs/3MPT_IIST_MRSI.pdf" class="btn btn-primary"  target="blank">Know more</a><br>
+                        <a href="https://forms.gle/k4fper7hYmPMoX3n6"  target="blank" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logo" style="position: fixed;
+    bottom: 0px;
+    width: 15vw;">
+        <img src="ieee_assets/images/IIST-Logo-white.png">
+    </div>
+
+    <div class="con-logo">
+        <img src="dist/workshop_assets/logo_wire.png">
+    </div>
+    
+    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_kumaran<br>&copy Conscientia
+            2020</a></div>
+
+
+    <script>
+
+
+        var container;
+
+        var camera, scene, renderer;
+
+        var mouseX = 0, mouseY = 0;
+
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+
+        init();
+        animate();
+
+
+        function init() {
+
+            container = document.createElement('div');
+            document.body.appendChild(container);
+
+            camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 10000);
+            camera.position.z = 0;
+
+            // scene
+
+            scene = new THREE.Scene();
+            fogColor = new THREE.Color(0x000000);
+
+            scene.background = fogColor;
+            scene.fog = new THREE.Fog(fogColor, 2500, 5000);
+
+
+            var ambientLight = new THREE.AmbientLight(0xC40CE8, 0.5);
+            //scene.add( ambientLight );
+
+            var pointLight = new THREE.PointLight(0x29C7D5, 2);
+            camera.add(pointLight);
+            scene.add(camera);
+
+            // texture
+
+            var manager = new THREE.LoadingManager();
+            manager.onProgress = function (item, loaded, total) {
+
+                console.log(item, loaded, total);
+
+            };
+
+            // Material
+            firstChildMaterial = new THREE.MeshLambertMaterial({
+                wireframe: true,
+            });
+
+
+            // model
+
+            var onProgress = function (xhr) {
+                if (xhr.lengthComputable) {
+                    var percentComplete = xhr.loaded / xhr.total * 100;
+                    console.log(Math.round(percentComplete, 2) + '% downloaded');
+                }
+            };
+
+            var onError = function (xhr) {
+            };
+
+            var loader = new THREE.OBJLoader(manager);
+            loader.load('robo.glb', function (object) {
+
+                object.traverse(function (child) {
+
+                    if (child instanceof THREE.Mesh) {
+
+                        child.material = firstChildMaterial;
+
+                    }
+
+                })
+                //object.scale.set(3,3,3);
+                object.position.z = -39;
+                object.position.y = -14;
+                scene.add(object);
+                object.scale.set(3.30955818181818, 3.30955818181818, 3.30955818181818);
+                window.addEventListener('mousemove', function (e) {
+                    var mouse3D = new THREE.Vector3(
+                        (event.clientX / window.innerWidth) * 30 - 15,
+                        - (event.clientY / window.innerHeight) * 30 + 10);
+
+                    object.lookAt(mouse3D);
+                })
+
+
+            }, onProgress, onError);
+
+
+
+            //
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+            //
+
+            window.addEventListener('resize', onWindowResize, false);
+
+        }
+
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function onDocumentMouseMove(event) {
+
+            mouseX = (event.clientX - windowHalfX) / 2;
+            mouseY = (event.clientY - windowHalfY) / 2;
+
+
+
+        }
+
+        //
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+            render();
+
+        }
+
+
+        function render() {
+
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+
+        }
+
+    </script>
+
+
+  
+</body>
+
+</html>

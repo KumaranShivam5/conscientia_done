@@ -7,6 +7,9 @@
     <link rel="icon" href="images/logo.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta name="keyword"
         content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,8 +20,9 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <!--script for full page scrolling-->
 
-    <link rel="stylesheet" href="ieee_assets/css/style_ieee.css">
-    <link rel="stylesheet" href="dist/workshop_assets/style.css">
+    <link rel="stylesheet" href="ieee_assets/css/style_ieee.css?v=8.5">
+    <link rel="stylesheet" href="dist/workshop_assets/style.css?v=2.0">
+    <link rel="stylesheet" href="shared/elements.css?v=3.0">
 
     <script src="http://threejs.org/build/three.min.js"></script>
     <script src="./js/script_glitch.js?v=3.1"></script>
@@ -36,19 +40,81 @@
             background: transparent !important;
             color: white !important;
         }
+
+        #events-home {
+            position: absolute;
+            top: 0px;
+            font-family: nasa;
+            font-size: 2.5vh;
+
+        }
     </style>
-    <link rel="stylesheet" href="ieee_assets/css/style.css">
+    <link rel="stylesheet" href="ieee_assets/css/style.css?v=13.0">
+    <script src="dist/events_assets/event_reg.js?v=2.0"></script>
+    <script src="shared/create_dash.js"></script>
 
 </head>
 
-<body>
-    <span id="vihang" onclick="load_list('vihang')">vihang</span>
-    <span id="vihang" onclick="load_list('robotics')">Robotics</span>
-    <span id="vihang" onclick="load_list('astro')">Astronomia</span>
+<body onload="main_menu_open()">
+    <!--nav bar starts here-->
+    <!--MENU optimization for mobil site is in ieee_assets/css/style_ieee.css-->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="container main-menu main-menu-closed">
+        <div class="row justify-content-center">
+            <div class="col blank"></div>
+            <div class="col content" onclick="load_list('vihang')" id="vihang"><span>vihang</span></div>
+            <div class="col content" onclick="load_list('robotics')" id="robotics"><span>Robotics</span></div>
+            <div class="col content" onclick="load_list('phil')" id="phil"><span>Philosophia</span></div>
+            <div class="col content" onclick="load_list('mecha')" id="mecha"><span>Mechatronics</span></div>
+            <div class="col blank"></div>
+            <div class="col content" onclick="load_list('astro')" id="astro"><span>Astronomia</span></div>
+            <div class="col content" onclick="load_list('kalad')" id="kalad"><span>Kaladioscope</span></div>
+            <div class="col content" onclick="load_list('paripath')" id="paripath"><span>Paripath</span></div>
+            <div class="col content" onclick="load_list('online')" id="online"><span>Online</span></div>
+            <div class="col content" onclick="load_list('gaming')" id="gaming"><span>Gaming</span></div>
+            <div class="col content" id="login"><span></span></div>
+        </div>
+    </div>
+    <a id="menu-button" href="#">
+        <span></span>
+    </a>
+    <script>
+        var flag = 0;
+        $("#menu-button").click(function () {
+            if (flag == 0) {
+                main_menu_open();
+            }
+            else {
+                main_menu_close();
+            }
+        });
+        function main_menu_open() {
+            $("#menu-button span").addClass("on");
+            flag = 1;
+            $(".main-menu").removeClass("main-menu-closed");
+            $(".main-menu").addClass("main-menu-open");
+
+        }
+        function main_menu_close() {
+            $("#menu-button span").removeClass("on");
+            flag = 0;
+            $(".main-menu").removeClass("main-menu-open");
+            $(".main-menu").addClass("main-menu-closed");
+        }
+
+    </script>
+
+    <!--navbar ends here-->
+
+
+    <!--
     <nav id="nav">
         <div class="nav-icon" id="nav-icon"><span></span></div>
         <ul id="sub-list">
-            <!--
+            
                   <li style="background-image: url(dist/workshop_assets/wire/neural.png);"><a href="#home"
                     style="background:black;" id="button-click">Neural <br>Network</a></li>
             <li style="background-image: url(dist/workshop_assets/wire/biomimicry.png);"><a href="#home"
@@ -61,11 +127,18 @@
                     style="background:black;" onclick="data_update(ss)">6th Sense<br>robotics</a></li>
             <li style="background-image: url(dist/workshop_assets/wire/swarm.png);"><a href="#ho"
                     style="background:black;" onclick="data_update(sr)">Swarm<br>robotics</a></li>
-            -->
+            
 
         </ul>
     </nav>
+-->
+
     <div id="main" style="transform: translate3d(0px, 0%, 0px); transition: transform 700ms ease 0s;">
+        <section class="section">
+            <div class="container" id="sub-list-div">
+
+            </div>
+        </section>
         <section class="section">
             <div class="container center-display ">
 
@@ -73,7 +146,7 @@
                     <div class="col-sm-12 col-lg-6 cell" style="border-left:0px;">
                         <div class="row" style="border-bottom:1px solid salmon">
                             <div class="col text-right">
-                                <h1 class="cell-title" id="event-title">Neural<br> Network</h1>
+                                <h1 class="cell-title" id="event-title"></h1>
                             </div>
                         </div>
                         <div class="row">
@@ -108,6 +181,7 @@
                             <li id="event-venue">Venue::</li>
                             <li id="event-time">Time::</li>
                             <li id="event-prize">Prize Money ::</li>
+                            <li id="event-contact">contact ::</li>
                         </ul>
 
                     </div>
@@ -119,10 +193,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6 cell cell-title">
                         <span style="width:100%;text-align: center;display:block;" class="mx-auto">
-                            Content
+                            Format
                         </span>
                     </div>
-                    <div class="col-sm-6 cell cell-detail" id="workshop-details">
+                    <div class="col-sm-6 cell cell-detail" id="event-format">
 
 
                     </div>
@@ -155,8 +229,8 @@
                         </span>
                     </div>
                     <div class="col-sm-6 cell cell-detail">
-                        <p id="workshop-reg-charge">registration charge:</p>
-                        <br><a href="" target="blank"><button class="reg-button">Register</button></a>
+
+                        <br><a href="#"><button class="reg-button" id="event-reg">Register</button></a>
 
                     </div>
                 </div>
@@ -176,7 +250,15 @@
     <div><a href="#" class="scroll-down" address="true"></a></div>
     <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_krn<br>&copy Conscientia
             2020</a></div>
-    <div class="loader" style="backdrop-filter: blur(5px);display:none;position:fixed;width:1000vw;height:100vh;top:0px;left:0px;z-index: 9999999999;background:transparent;"></div>
+    
+    <div class="home" id="events-home" style="">
+        Events <br><span style="font-size: 3vh;
+        background: black;
+        border: 1px 0px 1px 0px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        cursor: pointer;">home</span>
+    </div>
     <script>
 
 
@@ -344,41 +426,54 @@
     </script>
     <script src="ieee_assets/js/script.js"></script>
     <script>
-       var eventsAllData;
-        function load_list(eventName){
+        $("#events-home").click(function () {
+            page.moveTo(0);
+        });
+        var eventsAllData;
+        function load_list(eventName) {
+            //$(".main-menu .col").removeClass("active");
+            console.log("line before add class");
+            $(".content").removeClass("active");
+            var activeElementId = "#" + eventName;
+            $(activeElementId).addClass("active");
+            main_menu_close(); // this function defined just below main navigation menu
+            console.log("line after add class");
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyL-2XWvbai_c_sXhtKiMyCFARLNKWw4KBFE1eiwg0w-lbaDbk/exec?name="+eventName, success: function (result) {
+                url: "https://script.google.com/macros/s/AKfycbyL-2XWvbai_c_sXhtKiMyCFARLNKWw4KBFE1eiwg0w-lbaDbk/exec?name=" + eventName, success: function (result) {
                     var noEvents = result.number;
                     console.log("number of events :" + noEvents);
                     var list_item;
                     var load_finction;
-                    $(".sub-menu-items").remove();
+                    $(".sub-menu-items-div").remove();
                     for (i = 0; i < noEvents; i++) {
-                        load_function = "'"+eventName+"'," + i;
+                        load_function = "'" + eventName + "'," + i;
                         console.log("function variable is" + load_function);
                         load_function = "onclick=load_data_v2(" + load_function + ")";
                         console.log("function variable updated is : " + load_function);
-                        list_item = "<li class='sub-menu-items' style='background-image: url(" + result.user[i].image + ");' " + load_function + "><a href='#home'style='background:black;' id='button-click'>"+result.user[i].name+"</a></li>";
-                        $("#sub-list").append(list_item);
+                        list_item = "<div class='sub-menu-items-div' style='background-image: url(" + result.user[i].image + ");' " + load_function + "><a href='#home'style=';' id='button-click'>" + result.user[i].name + "</a></div>";
+                        $("#sub-list-div").append(list_item);
                     };
-                    eventsAllData=result;
-                    
+                    eventsAllData = result;
+                    page.moveTo(0);
                 }
                 ,
-                beforeSend : function(){$(".loader").css("display","block")} ,
-                complete : function(){ $(".loader").css("display","none") }
+                beforeSend: function () { open_loader(); },
+                complete: function () { close_loader();}
             });
         }
 
 
 
 
-       
+
         /*
                 $("#button-click").click(function () {
                    load_data("robotics",0);
                 });
         */
+        //this function makes another ajax call and thus increases time of loading for each event,
+        //since we already have all the list data loaded we will actually function being use here is load_data_v2
+        //and not this function load_data
         function load_data(e, i) {
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbyL-2XWvbai_c_sXhtKiMyCFARLNKWw4KBFE1eiwg0w-lbaDbk/exec?name=" + e, success: function (result) {
@@ -394,28 +489,65 @@
                     $("#event-venue").html(result.user[i].venue);
                     $("#event-intro").html(result.user[i].desc);
                     $("#event-logo").attr("src", result.user[i].image);
-                } ,
-                beforeSend : function(){$(".loader").css("display","block")} ,
-                complete : function(){ $(".loader").css("display","none") }
+                },
+                beforeSend: function () { $(".loader").css("display", "block") },
+                complete: function () { $(".loader").css("display", "none") }
             });
         };
 
-        function load_data_v2(e,i){
-           
-                    // console.log("event triggered");
-                    //console.log(result);
-                    //console.log(result.user[0].name);
-                    $("#event-title").html(eventsAllData.user[i].name);
-                    $("#event-rules").html(eventsAllData.user[i].rule);
-                    $("#event-prize").html(eventsAllData.user[i].prize);
-                    $("#event-date").html(eventsAllData.user[i].date);
-                    $("#event-time").html(eventsAllData.user[i].time);
-                    $("#event-venue").html(eventsAllData.user[i].venue);
-                    $("#event-intro").html(eventsAllData.user[i].desc);
-                    $("#event-logo").attr("src", eventsAllData.user[i].image);
-        }
+        function load_data_v2(e, i) {
 
+            // console.log("event triggered");
+            //console.log(result);
+            //console.log(result.user[0].name);
+            $("#event-title").html(eventsAllData.user[i].name);
+            $("#event-rules").html(eventsAllData.user[i].rule);
+            $("#event-prize").html(eventsAllData.user[i].prize);
+            $("#event-date").html(eventsAllData.user[i].date);
+            $("#event-time").html(eventsAllData.user[i].time);
+            $("#event-venue").html(eventsAllData.user[i].venue);
+            $("#event-intro").html(eventsAllData.user[i].desc);
+            $("#event-format").html(eventsAllData.user[i].format);
+            $("#event-contact").html(eventsAllData.user[i].contact);
+            //console.log(eventsAllData.user[i].format);
+            //$("#event-format").html(eventsAllData.user[i].format);
+            $("#event-logo").attr("src", eventsAllData.user[i].image);
+            var request = "register_for('" + eventsAllData.user[i].id + "')";
+            $("#event-reg").attr("onclick", request);
+
+            page.moveTo(1);
+        }
+        function register_for(eventId) {
+            var x = getCookie("profdata");
+            open_loader();
+            if (x != "") {
+                var data = JSON.parse(x);
+                var url = "http://dhanak19-001-site4.htempurl.com/api/user/ereg/" + data.DId + "/" + eventId + "/0000";
+                console.log("making request with", url);
+                $.ajax({
+                    url: url,
+                    
+                    success: function (result) { 
+                       // if(result.message=="Registered")
+                         //   alert("Registered");
+                        //else alert("Registration for this event will start soon..Stay connected.");
+                        alert(result.message);
+                        close_loader();
+                    }
+
+                });
+            }
+            else {
+                alert("login to contiue");
+                close_loader();
+                window.location="login_v3.html";
+
+            };
+           
+
+        }
     </script>
+    <script src="shared/elements.js"></script>
 
 </body>
 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://dhanak.co.in/login.aspx -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Dhanak Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="icon" href="http://dhanak.co.in/images/favicon.png">
+    <link rel="stylesheet" href="./login_files/bootstrap.min.css">
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>!-->
+    <script src="./login_files/jquery.min.js"></script><script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script>
+    <script src="./login_files/sha.js"></script>
+    <script src="./login_files/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="login_files/jquery.modal.min.css">
+    <script src="./login_files/main_v2.js"></script>
+    <link rel="stylesheet" href="./login_files/style.css">
+    <link rel="stylesheet" href="./login_files/style(1).css">
+    <style>
+        .nav-link{
+            font-family: 'Segoe UI';
+            font-weight: 200;
+        }
+        .loader {
+            border: 10px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 10px solid #db34d9;
+            width: 60px;
+            height: 60px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+    }
+        </style>
+</head>
+<body class="bg-image">
+    <div id="ex1" class="modal" style="overflow:visible; height: 150px; width:250px; border: 5px solid #db34d9;">
+        <div class="loader" id="picmod" style="margin:auto; height:60px;width:60px;"></div>
+        <p style="margin:auto;width:190px; text-align:center;margin-top:15px;" id="modtext">Registering...</p>
+    </div>
+    <div id="wrapper" class="">
+        <div class="overlay" style="display: none;"></div>
+        <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md" id="sidebar-wrapper" role="navigation" style="padding-left: 0;padding-right:0;">
+            <ul class="nav sidebar-nav" style="margin:0;padding:0;position:absolute;list-style:none;top:0;width:220px" id="menu">
+                <li class="sidebar-brand nav-item">
+                    <a href="http://dhanak.co.in/login.aspx#" class="nav-link"> DHANAK </a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/index.aspx" class="nav-link"><i class="glyphicon glyphicon-camera"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/workshop_page/workshop.aspx" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Workshop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/events.aspx" class="nav-link"><i class="glyphicon glyphicon-facetime-video"></i> Main Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/music.aspx" class="nav-link"><i class="glyphicon glyphicon-headphones"></i> Music &amp; Dance</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/literary.aspx" class="nav-link"><i class="glyphicon glyphicon-cloud"></i> Literary</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/quiz.aspx" class="nav-link"><i class="glyphicon glyphicon-th"></i> Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/art.aspx" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Art</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/informals.aspx" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Informals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/gaming.aspx" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Gaming</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/webbed/webbed_wrap/webbed.aspx" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Webbed</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://dhanak.co.in/login.aspx#" class="nav-link"><i class="glyphicon glyphicon-cog"></i> Login</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" style="margin-top:0px;" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div class="container">
+                <div class="container">
+                    <div class="wrapperf" id="reg" style="z-index: -1;">
+                        <div class="inner">
+                            <div id="frost">
+                                <form onsubmit="return false">
+
+                                    <h3>Register</h3>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-user"></span>
+                                        <input type="text" class="form-control" placeholder="Name" id="name" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-phone-handset"></span>
+                                        <input type="text" class="form-control" placeholder="Phone Number" id="no" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-envelope"></span>
+                                        <input type="text" class="form-control" placeholder="E-mail ID" id="em" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-graduation-hat"></span>
+                                        <input type="text" class="form-control" placeholder="College" id="col" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-lock"></span>
+                                        <input type="password" class="form-control" placeholder="Password" id="pwd" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-lock"></span>
+                                        <input type="password" class="form-control" placeholder="Confirm Password" id="cpwd" required="">
+                                    </div>
+                                    <button type="submit" onclick="register()">
+                                        <span>Register</span>
+                                    </button>
+                                    <br>
+                                    <p class="gtl" id="statusr"></p>
+                                    <br>
+                                    <h4 class="gtl" onclick="loadlogin()" style="cursor:pointer"><u>Already have an account?</u></h4>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <img src="./Dhanak Login_files/image-2.png" alt="" class="image-1">
+                    <div class="wrapperf" id="log" style="z-index:-1;">
+                        <div class="inner">
+                            <div id="frost">
+                                <form onsubmit="return false">
+
+                                    <h3>Login</h3>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-envelope"></span>
+                                        <input type="text" class="form-control" placeholder="E-mail ID or Dhanak ID" id="eml" required="">
+                                    </div>
+                                    <div class="form-holder">
+                                        <span class="lnr lnr-lock"></span>
+                                        <input type="password" class="form-control" placeholder="Password" id="pwdl" required="">
+                                    </div>
+                                    <button type="submit" onclick="login()">
+                                        <span id="logbut">Login</span>
+                                    </button>
+                                    <br>
+                                    <p class="gtr" id="statusl"></p>
+                                    <br>
+                                    <h4 class="gtr" onclick="loadregister()" style="cursor:pointer"><u>Don't have an account?</u></h4>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

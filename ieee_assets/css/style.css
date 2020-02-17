@@ -137,7 +137,7 @@ nav.active ul {
     text-align: center;
     display: block;
     /* text-overflow: ellipsis; */
-    font-size: 11vh !important;
+    font-size: 11vh;
     overflow-wrap: break-word;
     font-stretch: condensed;
     font-family: inherit;

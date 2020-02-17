@@ -1,0 +1,293 @@
+<html>
+
+<head>
+
+    <title>Conscientia||2020</title>
+
+    <link rel="icon" href="images/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keyword"
+        content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="shared/fullpage.extensions.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared/fullpage.css">
+    <link rel="stylesheet" href="merch_assets/merch.css?v=7.5">
+    <link rel="stylesheet" href="shared/elements.css">
+
+</head>
+
+<body>
+
+    <div class="container main-menu main-menu-closed">
+        <div class="row justify-content-center">
+            <div class="col blank"></div>
+            <a class="col content" href="home.aspx?v=7.5"><span>Home</span></a>
+            <a class="col content" href="events_v2.html?v=7.5"><span>Events</span></a>
+            <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
+            <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
+
+            <a class="col content" href="login.html?v=7.5" id="dash-cell"><span>Login</span></a>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+        </div>
+    </div>
+    <a id="menu-button" href="#">
+        <span></span>
+    </a>
+    <script>
+        var flag = 0;
+        $("#menu-button").click(function () {
+            if (flag == 0) {
+                main_menu_open();
+            }
+            else {
+                main_menu_close();
+            }
+        });
+        function main_menu_open() {
+            $("#menu-button span").addClass("on");
+            flag = 1;
+            $(".main-menu").removeClass("main-menu-closed");
+            $(".main-menu").addClass("main-menu-open");
+
+        }
+        function main_menu_close() {
+            $("#menu-button span").removeClass("on");
+            flag = 0;
+            $(".main-menu").removeClass("main-menu-open");
+            $(".main-menu").addClass("main-menu-closed");
+        }
+
+    </script>
+
+
+    <div id="fullpage">
+        <div class="section" style="color:#ffd400;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 title-large-flat" style="border-right:1px solid white;">Conscientia
+                        2020<br><span class="title-small-flat">Merchandise</span></div>
+                    <div class="col-sm-4 title-small-flat merch-nav">
+                        <a href="#merch/slide2" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">Wanderer</div>
+                        </a>
+                        <a href="#merch/slide1" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">Darth Wader</div>
+                        </a>
+                        <a href="#merch/slide3" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">Hoodie</div>
+                        </a>
+                        <a href="#merch/slide4" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">Polo</div>
+                        </a>
+                        <a href="#combo/slide1" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">TeesCombo</div>
+                        </a>
+                        <a href="#combo/slide2" style="cursor:pointer;text-decoration:none;">
+                            <div class="row  desc-title">ConCombo</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="color:black;">
+            <div class="slide" data-anchor="slide1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="border-right:1px solid black;"><img src="merch_assets/glow/0.png"
+                                class="t-shirt" id="glow" onclick="rev_merch('glow')">
+                            <br><span class="desc"
+                                style="font-size:2vh;text-align: center;display:block;width:100%;">Click on the image to
+                                view other side</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="title-small-flat">Darth Wader</div><br>
+                            <span class="desc">very cool t-shirt you must buy it </span>
+                            <div class="desc-title">Price: 400</div>
+                            <br>
+                            <button class="flat-button">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2" style="width: 25%;
+            background: #451b12;
+            color: white;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="border-right:1px solid black;"><img src="merch_assets/mars/0.png"
+                                class="t-shirt" id="mars" onclick="rev_merch('mars')">
+                            <br><span class="desc"
+                                style="font-size:2vh;text-align: center;display:block;width:100%;">Click on the image to
+                                view other side</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="title-small-flat">Wanderer</div><br>
+                            <span class="desc">very cool t-shirt you must buy it </span>
+                            <div class="desc-title">Price: 400</div>
+                            <br>
+                            <button class="flat-button"  style="color:white; ">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="border-right:1px solid black;"><img src="merch_assets/hood/0.png"
+                                class="t-shirt" id="hood" onclick="rev_merch('hood')">
+                            <br><span class="desc"
+                                style="font-size:2vh;text-align: center;display:block;width:100%;">Click on the image to
+                                view other side</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="title-small-flat">Hoodie</div><br>
+                            <span class="desc">very cool t-shirt you must buy it </span>
+                            <div class="desc-title">Price: 650</div>
+                            <br>
+                            <button class="flat-button">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide4" style="background: #b71818;
+            color: white;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="border-right:1px solid black;"><img src="merch_assets/polo/0.png"
+                                class="t-shirt" id="polo" onclick="rev_merch('polo')">
+                            <br><span class="desc"
+                                style="font-size:2vh;text-align: center;display:block;width:100%;">Click on the image to
+                                view other side</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="title-small-flat">POLO</div><br>
+                            <span class="desc">very cool t-shirt you must buy it </span>
+                            <div class="desc-title">Price: 350</div>
+                            <br>
+                            <button class="flat-button"  style="color:white; ">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="color:white;">
+            <div class="slide" data-anchor="slide1" style="background:firebrick ;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4" style="border-right:1px solid white;"><img
+                                src="merch_assets/glow/0.png" class="t-shirt combo1">
+
+                        </div>
+                        <div class="col-sm-6 col-lg-4" style="border-right:1px solid white;"><img
+                                src="merch_assets/mars/0.png" class="t-shirt combo1">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="title-small-flat">TeesCombo</div><br>
+                            <div class="desc-title" style="margin-top: -30px;
+                            margin-bottom: -25px;">Price: 350</div>
+                            <br>
+                            <button class="flat-button">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2" style="background:#102439;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="border-right:1px solid black;"><img src="merch_assets/combo.png"
+                                class="t-shirt">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="title-small-flat">ConCombo</div><br>
+                            <div class="desc-title" style="margin-top:-30px;margin-bottom:-20px;">Price: 16500</div>
+                            <br>
+                            <button class="flat-button" style="color:white; ">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 title-large-flat" style="border-right:1px solid white;">Merchandise<br><span
+                            class="title-small-flat">Partner</span></div>
+                    <div class="col-sm-4 title-small-flat">
+                        <div class="row  desc-title">Terms Of Services</div>
+                        <div class="row desc">
+                            <ul>
+                                <li>Buy it on your own risk</li>
+                                <li>Once sold it will not be returned</li>
+                                <li>Its easy to buy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        Designed and developed by<br>Kumaran.s()<br>
+        &copy Conscientia 2020
+    </div>
+    <script>
+        new fullpage('#fullpage', {
+            //licenseKey: 'YOUR KEY HERE',
+            menu: '#menu',
+            lockAnchors: false,
+            anchors: ['title', 'merch','combo','partner'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['top', 'Merch', 'Combo', 'Partner'],
+            showActiveTooltip: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+            dragAndMove: true,
+
+            sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
+            autoScrolling: true,
+            scrollHorizontally: true,
+            lazyLoading: true,
+        });
+        var flag = "0";
+        function rev_merch(ctg) {
+
+            var id = "#" + ctg;
+            var url;
+            if (flag == "0") {
+                url = "merch_assets/" + ctg + "/" + flag + ".png";
+                $(id).attr("src", url);
+                flag = "1";
+            }
+            else {
+                url = "merch_assets/" + ctg + "/" + flag + ".png";
+                $(id).attr("src", url);
+                flag = "0";
+            }
+        }
+    </script>
+</body>
+
+</html>

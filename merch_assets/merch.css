@@ -1,0 +1,148 @@
+.t-shirt{
+    width: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    max-height: 40vh;
+    /* width: auto; */
+    /* margin-left: 13%; */
+    /* contain: content; */
+    object-fit: contain;
+}
+
+.main-menu {
+    font-family: 'Montserrat';
+    mix-blend-mode: difference;
+    -webkit-font-smoothing: antialiased;
+    
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    max-width: 100vw;
+    font-size: 2.3vh;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.main-menu col {
+    display: inline-block;
+}
+
+.main-menu .content {
+    color: white;
+    border-bottom: 1px solid #00e2ff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    transition: all 0.4s;
+}
+
+.main-menu .blank {
+    color: white;
+    padding: 0px !important;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0px !important;
+}
+
+.main-menu .active {
+    border-bottom: 0px;
+    border-left: 9px solid #00e2ff !important;
+    border-top: 1px solid #00e2ff !important;
+    border-right: 30px solid #00e2ff !important;
+    color: #00e2ff !important;
+}
+
+
+.combo1{
+    max-height:33vh !important;
+}
+
+.combo2{
+    max-height: ;
+}
+
+
+.merch-nav .desc-title{
+    font-size: 3vh !important;
+    color:yellow;
+    transition:0.3s;
+}
+.merch-nav .desc-title:hover{
+    color:white;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main-menu {
+        width: 100vw;
+        background: linear-gradient(90deg, black, black, transparent);
+        height: 100vh;
+        mix-blend-mode: normal;
+    }
+   
+    .main-menu .content {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        min-width: 100vw;
+        border-bottom: 0px !important;
+    }
+    .main-menu .active {
+        border-top: 0px !important;
+    }
+    #menu-button {
+        display: block;
+        z-index: 2;
+        position: absolute;
+        right: 5%;
+        top: 3%;
+        width: 5vh;
+        height: 5vh;
+    }
+    #menu-button span, #menu-button span:before, #menu-button span:after {
+        width: 100%;
+        background: white;
+        display: block;
+        height: 2px;
+        /* border-radius: 26%; */
+        position: relative;
+        transition: 0.4s;
+    }
+    #menu-button span:before, #menu-button span:after {
+        content: "";
+    }
+    #menu-button span:before {
+        top: -11px;
+    }
+    #menu-button span:after {
+        bottom: -9px;
+    }
+    #menu-button span {
+        top: 50%;
+    }
+    .on {
+        background: transparent !important;
+    }
+    .on:before {
+        top: 1px !important;
+        transform: rotate(45deg);
+    }
+    .on:after {
+        bottom: 1px !important;
+        transform: rotate(-45deg);
+    }
+    .main-menu-open{left:0px !important;}
+    .main-menu-closed{left:-100% !important;}
+    
+   
+}
+
+@media only screen and (min-width:600px) {
+    #menu-button {
+        display: none;
+    }
+    .main-menu-closed{left:0px;}
+}
