@@ -28,6 +28,8 @@
     <script src="./js/script_glitch.js?v=3.1"></script>
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
     <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+    <!--Kumaran's theme-->
+    <link rel='stylesheet' href="shared/elements.css">
     <style type="text/css">
         canvas {
             position: absolute;
@@ -52,6 +54,8 @@
     <link rel="stylesheet" href="ieee_assets/css/style.css?v=13.0">
     <script src="dist/events_assets/event_reg.js?v=2.0"></script>
     <script src="shared/create_dash.js"></script>
+    <script src="shared/fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="shared/fullpage.css">
 
 </head>
 
@@ -68,12 +72,12 @@
             <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
             <a class="col content" href="threempt.html?v=7.5"><span>3MPT</span></a>
             <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
-            
+
             <div class="col blank"></div>
             <div class="col blank"></div>
             <div class="col blank"></div>
             <div class="col blank"></div>
-            <div class="col blank" ></div>
+            <div class="col blank"></div>
             <div class="col blank"></div>
         </div>
     </div>
@@ -107,37 +111,16 @@
     </script>
 
     <!--navbar ends here-->
+    <!--MAIN Content starts-->
 
-
-    <div id="main" style="transform: translate3d(0px, 0%, 0px); transition: transform 700ms ease 0s;">
-
-
-
-        <section class="section">
-            <div class="container center-display">
-                <div class="row align-items-center">
-                    <div class="col-sm-6 cell cell-title">
-                        <span style="font:monospace;color:crimson;font-size: 2vh;text-align: left;">Welcome to the Portal..</span>
-                        <span style="text-transform:uppercase;width:100%;text-align: center;display:block;font-size:3vh;" class="mx-auto" id="user-name">
-
-                        </span>
-                    </div>
-                    <div class="col-sm-6 cell cell-detail">
-
-                        <ul>
-                            <li  id="user-cid"></li>
-                            <li  id="user-email"></li>
-                            <li  id="user-insti"></li>
-                            <li  id="user-phone"></li>
-                        </ul>
-                        <div id="user-events"></div>
-                        <button class="universal-button" onclick="logout()">LOGOUT</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+    <div id="fullpage">
+        <div class="section">
+            <div class="slide" data-anchor="slide2"></div>
+        </div>
+        <div class="section"></div>
     </div>
+
+    <!--Main content ends-->
     <div id="logo" style="position: fixed;
     bottom: 0px;
     width: 15vw;">
@@ -148,12 +131,13 @@
         <img src="dist/workshop_assets/logo_wire.png">
     </div>
     <div><a href="#" class="scroll-down" address="true"></a></div>
-    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_kumaran<br>&copy Conscientia
+    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_kumaran<br>&copy
+            Conscientia
             2020</a></div>
     <div class="loader"
         style="backdrop-filter: blur(5px);display:none;position:fixed;width:1000vw;height:100vh;top:0px;left:0px;z-index: 9999999999;background:transparent;">
     </div>
-
+    <!--MONK script starts here-->
     <script>
 
 
@@ -308,152 +292,29 @@
         }
 
     </script>
-    <script src="ieee_assets/js/fullPage.min.js"></script>
-    <script>
-        var page = new FullPage("#main", {
-            onLeave: function (e) {
-                console.log(e)
-            },
-            afterLoad: function (e) {
-                console.log(e)
-            }
-        });
-    </script>
+    <!--MONK script starts here-->
+
     <script src="ieee_assets/js/script.js"></script>
     <script>
-        $("#events-home").click(function () {
-            page.moveTo(0);
+        new fullpage('#fullpage', {
+            //licenseKey: 'YOUR KEY HERE',
+            menu: '#menu',
+            lockAnchors: false,
+            anchors: ['title', 'merch', 'combo', 'partner'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['top', 'Merch', 'Combo', 'Partner'],
+            showActiveTooltip: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+            dragAndMove: true,
+
+            sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
+            autoScrolling: true,
+            scrollHorizontally: true,
+            lazyLoading: true,
         });
-
-        $(document).ready(function () {
-            var x = getCookie("profdata");
-            console.log(x);
-            console.log("dash function run");
-            if (x != "") {
-                data = JSON.parse(x);
-                var name = data.Name.split(" ");
-                $("#login span").html("<a href='dashboard.html'>" + name[0] + "</a>");
-                console.log("function run inside if");
-                $("#user-name").html(data.Name);
-                $("#user-cid").html("ConID : " +data.DId);
-                $("#user-email").html("Email ID : "+data.Email);
-                $("#user-phone").html("Contact No : "+data.Phone);
-                $("#user-insti").html("Institute : "+ data.College);
-
-            }
-            else {
-                $("#login span").html("<a href='login_v3.html'>Login</a>");
-                //console.log("inside else");
-            }
-
-        });
-
-        var eventsAllData;
-        function load_list(eventName) {
-            //$(".main-menu .col").removeClass("active");
-            console.log("line before add class");
-            $(".content").removeClass("active");
-            var activeElementId = "#" + eventName;
-            $(activeElementId).addClass("active");
-            main_menu_close(); // this function defined just below main navigation menu
-            console.log("line after add class");
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyL-2XWvbai_c_sXhtKiMyCFARLNKWw4KBFE1eiwg0w-lbaDbk/exec?name=" + eventName, success: function (result) {
-                    var noEvents = result.number;
-                    console.log("number of events :" + noEvents);
-                    var list_item;
-                    var load_finction;
-                    $(".sub-menu-items-div").remove();
-                    for (i = 0; i < noEvents; i++) {
-                        load_function = "'" + eventName + "'," + i;
-                        console.log("function variable is" + load_function);
-                        load_function = "onclick=load_data_v2(" + load_function + ")";
-                        console.log("function variable updated is : " + load_function);
-                        list_item = "<div class='sub-menu-items-div' style='background-image: url(" + result.user[i].image + ");' " + load_function + "><a href='#home'style=';' id='button-click'>" + result.user[i].name + "</a></div>";
-                        $("#sub-list-div").append(list_item);
-                    };
-                    eventsAllData = result;
-                    page.moveTo(0);
-                }
-                ,
-                beforeSend: function () { $(".loader").css("display", "block") },
-                complete: function () { $(".loader").css("display", "none") }
-            });
-        }
-
-
-
-
-
-        /*
-                $("#button-click").click(function () {
-                   load_data("robotics",0);
-                });
-        */
-        //this function makes another ajax call and thus increases time of loading for each event,
-        //since we already have all the list data loaded we will actually function being use here is load_data_v2
-        //and not this function load_data
-        function load_data(e, i) {
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyL-2XWvbai_c_sXhtKiMyCFARLNKWw4KBFE1eiwg0w-lbaDbk/exec?name=" + e, success: function (result) {
-                    $("#workshop-title").html(result);
-                    // console.log("event triggered");
-                    //console.log(result);
-                    //console.log(result.user[0].name);
-                    $("#event-title").html(result.user[i].name);
-                    $("#event-rules").html(result.user[i].rule);
-                    $("#event-prize").html(result.user[i].prize);
-                    $("#event-date").html(result.user[i].date);
-                    $("#event-time").html(result.user[i].time);
-                    $("#event-venue").html(result.user[i].venue);
-                    $("#event-intro").html(result.user[i].desc);
-                    $("#event-logo").attr("src", result.user[i].image);
-                },
-                beforeSend: function () { $(".loader").css("display", "block") },
-                complete: function () { $(".loader").css("display", "none") }
-            });
-        };
-
-        function load_data_v2(e, i) {
-
-            // console.log("event triggered");
-            //console.log(result);
-            //console.log(result.user[0].name);
-            $("#event-title").html(eventsAllData.user[i].name);
-            $("#event-rules").html(eventsAllData.user[i].rule);
-            $("#event-prize").html(eventsAllData.user[i].prize);
-            $("#event-date").html(eventsAllData.user[i].date);
-            $("#event-time").html(eventsAllData.user[i].time);
-            $("#event-venue").html(eventsAllData.user[i].venue);
-            $("#event-intro").html(eventsAllData.user[i].desc);
-            $("#event-format").html(eventsAllData.user[i].format);
-            $("#event-contact").html(eventsAllData.user[i].contact);
-            //console.log(eventsAllData.user[i].format);
-            //$("#event-format").html(eventsAllData.user[i].format);
-            $("#event-logo").attr("src", eventsAllData.user[i].image);
-            var request = "register_for('" + eventsAllData.user[i].id + "')";
-            $("#event-reg").attr("onclick", request);
-
-            page.moveTo(1);
-        }
-        function register_for(eventId) {
-            var x = getCookie("profdata");
-            if (x != "") {
-                var data = JSON.parse(x);
-                var url = "http://dhanak19-001-site4.htempurl.com/api/user/ereg/" + data.DId + "/" + eventId + "/0000";
-                console.log("making request with", url);
-                //$.ajax({
-                //  url: url,
-                //success: function (result) { alert(result); }
-
-                //});
-            }
-            else {
-                alert("login to contiue");
-            };
-
-
-        }
+        
     </script>
 
 </body>

@@ -1,3 +1,22 @@
+.white{
+    color:white !important;
+}
+.cyan{
+    color:cyan !important;
+}
+.crimson{
+    color:crimson !important;
+}
+.nasa{
+    font-family:nasa !important;
+}
+.mono{
+    font-family:monospace !important;
+}
+.bg-translucent{
+    background-color:#0000003d !important;
+}
+
 .universal-button {
     padding: 10px;
     width: 100%;
@@ -80,7 +99,7 @@ a {
 }
 
 .loader-wrapper .loader::before {
-    content="";
+    content:"";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,6 +114,7 @@ a {
     animation: rotate 1.2s linear infinite;
 }
 
+
 @keyframes rotate {
     from {
         transform: rotateZ(0deg);
@@ -108,6 +128,26 @@ a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 10vh;
+}
+
+.title-xl-nasa{
+    font-family: nasa;
+    font-size: 5vh;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.title-l-nasa{
+    font-family: nasa;
+    font-size: 3vh;
+    text-align: center;
+    line-height: 2rem;
+}
+.subtitle-sm-mono{
+    font-family: monospace;
+    font-size: 1.7vh;
+    text-align: center;
+    line-height: 2rem;
 }
 
 .title-small-flat {
@@ -146,6 +186,95 @@ a {
     right: 10px;
     text-align: right;
 }
+
+
+.para-large{
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.2rem;
+    color: white;
+    border-right: 1px solid crimson;
+    border-left: 1px solid crimson;
+}
+.social-icon img{
+    width: 100%;
+    vertical-align: middle;
+    align-content: center;
+    object-fit: cover;
+    margin: auto;
+    
+}
+.social-icon{
+    border-left:1px solid cyan;
+    border-right:1px solid cyan;
+    margin:5px;
+}
+
+
+.highlights li{
+
+    border-left:4px solid cyan;
+    border-right:14px solid cyan;
+    border-bottom:1px dashed cyan;
+    border-top:1px dashed cyan;
+    margin:2px;
+    padding:5px;
+}
+
+h1 ,h2, h3, h4, h5{
+    display:block;
+    border-right:1px solid crimson !important;
+    border-left:1px solid crimson !important;
+}
+
+
+.gallery-container{
+    width:fit-content;
+    display: flex;
+}
+.gallery-container img{
+    flex:1;
+    width:250px;
+    object-fit:contain;
+    padding: 10px;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.main_logo{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: url(../images/logo_modified_white.png);
+    background-size: 100%;
+    border-radius: 50%;
+    top: -74px;
+    left: -75px;
+    transform: rotateZ(-75deg);
+}
+
+.bracket{
+
+}
+.bracket-left{
+
+}
+.bracket-right{
+
+}
+.bracket-cover{
+
+}
+
+.footer{
+    margin-top:30px;
+    border-top:1px solid cyan;
+    font-size:1.5vh;
+    color:cyan;
+    font-family:monospace;
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
