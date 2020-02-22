@@ -1,0 +1,223 @@
+.box {
+	background-color: rgba(154, 18, 179, 0.2);
+	border: 2px solid #bbbbbb;
+	width: 205px;
+	height: 205px;
+	position: relative;
+}
+
+.box::before {
+	border: 2px solid white;
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+}
+
+.image-in {
+	width: 200px;
+	height: 200px;
+}
+
+.webbed_anchor {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 1vw;
+	bottom: 0;
+	margin: 0 auto;
+	position: fixed;
+	border: 2px solid purple;
+	background-color: transparent;
+	color: gray;
+}
+
+#leaderboard_table {}
+
+#leaderboard_table td {
+	background: linear-gradient(45deg, #0201018a, transparent);
+}
+
+@media only screen and (max-width: 600px) {
+	.box {
+		background-color: transparent;
+		border: none;
+		width: 150px;
+		height: 150px;
+		position: relative;
+	}
+	.box::before {
+		border: 1px solid white;
+		content: '';
+		width: 125px;
+		height: 125px;
+		position: absolute;
+	}
+	.image-in {
+		width: 125px;
+		height: 125px;
+	}
+	.webbed_anchor {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+		font-size: 3vw;
+		margin: 0 auto;
+		bottom: 0;
+		border: 2px solid purple;
+		text-align: left;
+		background-color: transparent;
+		text-decoration: underline;
+		color: gray;
+	}
+}
+
+@font-face {
+	font-family: "hacked";
+	src: url("../fonts/hacked.ttf");
+}
+
+@font-face {
+	font-family: "cgothic";
+	src: url("../fonts/cgothic.ttf");
+}
+
+.webbed_button {
+	background-color: none;
+	/* Green */
+	border: none;
+	color: none;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.webbed_button1 {
+	background-color: transparent;
+	font-family: nasa;
+	color: white;
+	border: 2px solid gray;
+}
+
+.webbed_button1:hover {
+	background-color: gray;
+	color: white;
+}
+
+div.p {
+	font-family: 'hacked','nasa','monospace';
+    /* padding: 30px; */
+    text-align: center;
+    /* line-height: 2rem; */
+    border-top: 1px dashed cyan;
+    border-bottom: 1px dashed cyan;
+    overflow-wrap: break-word;
+}
+
+div.webbed_heading {
+	font-family: 'hacked';
+	z-index: 1;
+	font-weight: 900;
+	font-size: 7vw;
+	padding: 10px;
+	transform: translate(-20%, -50%);
+	top: 50%;
+	position: absolute;
+	color: white;
+	text-align: center;
+	line-height: 2rem;
+}
+
+.rectangle {
+	height: 200% !important;
+	z-index: 0;
+	position: absolute;
+	transform: translate(0, -30%);
+	width: 30vw;
+	background-color: rgba(103, 65, 114, 0.7);
+}
+
+.rule-page {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+	font-family: Montserrat, sans-serif;
+	font-size: 2vh;
+	text-align: left;
+	padding-bottom: -30px;
+}
+
+div.container {
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.universal-button-v2 {
+	padding: 10px;
+	width: 100%;
+	background: #0000008c;
+	colo: cyan;
+	color: white;
+	font-family: nasa;
+	border-left: 4px solid purple;
+	border-right: 10px solid purple;
+	border-top: 1px dashed purple;
+	border-bottom: 1px dashed purple;
+	margin: 10px;
+	transition: 0.2s;
+}
+
+.universal-button-v2:hover {
+	background: black;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-left: 4px solid rgba(191, 85, 236, 1) !important;
+	border-right: 12px solid rgba(191, 85, 236, 1) !important;
+	border-top: 1px dashed white !important;
+	border-bottom: 1px dashed white !important;
+}
+
+th {
+	background-color: rgba(0, 0, 0, 0.7);
+	font-family: "cgothic";
+	font-size: 5vh;
+	color: white;
+}
+
+tr:hover {
+	background-color: rgba(102, 51, 153, 0.2);
+	color: black;
+}
+
+td ,th{
+	color: white;
+	font-family: nasa;
+	font-size: 2vh;
+	padding: 15px;
+	transition: 0.2s;
+	text-align: center;
+	margin: 0px;
+}
+
+
+
+.qs_loader{
+	
+	display:none;
+	width:100%;
+	height:100%;
+	background:black;
+	text-align:center;
+	font-family:nasa;
+	color:white;
+	font-size:3vh;
+}

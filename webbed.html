@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -23,11 +24,14 @@
     <link rel="stylesheet" href="ieee_assets/css/style_ieee.css?v=8.5">
     <link rel="stylesheet" href="dist/workshop_assets/style.css?v=2.0">
     <link rel="stylesheet" href="shared/elements.css?v=5.0">
+    <link rel="stylesheet" href="shared/webbed_styles.css">
 
     <script src="http://threejs.org/build/three.min.js"></script>
     <script src="./js/script_glitch.js?v=3.1"></script>
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
     <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+    <script src="webbed_assets/webbed_con.js"></script>
+    
     <!--Kumaran's theme-->
     <link rel='stylesheet' href="shared/elements.css">
     <style type="text/css">
@@ -35,7 +39,7 @@
             position: absolute;
             top: 0px;
             z-index: -10;
-            opacity: 0.5;
+            opacity: 0.3;
         }
 
         .section {
@@ -56,6 +60,8 @@
     <script src="shared/create_dash.js"></script>
     <script src="shared/fullpage.extensions.min.js"></script>
     <link rel="stylesheet" href="shared/fullpage.css">
+    <link rel="stylesheet" href="./css/style_glitch.css?v=3.0">
+    <script src="./js/script_glitch.js?v=3.1"></script>
 
 </head>
 
@@ -112,31 +118,47 @@
 
     <!--navbar ends here-->
     <!--MAIN Content starts-->
-
-    <div id="fullpage">
-        <div class="section">
-            <div class="slide" data-anchor="slide2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide" data-anchor="slide2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section"></div>
-    </div>
-
+<div class="center-wait" style="position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;">
+<span style="font-family: 'hacked';
+font-size: 16vh;
+color: crimson;">WEBBED </span>
+<br>
+<span style="font-family: 'hacked';
+font-weight: 500;
+color: cyan;
+font-size: 5vh;">going live at 8:00:00 </span></br>
+<span>Feb 21 , 2020<br>
+<span style="font-family: nasa;
+color: white;">grab_a_cup_of_coffee__<br>#hackToTheFuture</span>
+<br>
+<div id="reg-button"><span class="universal-button" >Register</span></div>
+</div>
+<script>
+    $(document).ready(function(){
+    var x=getCookie("profdata");
+    //console.log(data);
+    //console.log("dash function run");
+    if(x!=""){
+        var data=JSON.parse(x);
+        var name = data.Name.split(" ");
+        $("#reg-button span").html("Best of Luck "+name[0]);
+        console.log("function run inside if");
+    }
+    else {
+        $("#reg-button span").html("<a href='login_v3.html'>Login/Register</a>");
+        console.log("inside else");
+    }
+   
+});
+</script>
     <!--Main content ends-->
     <div id="logo" style="position: fixed;
-    bottom: 0px;
-    width: 15vw;">
+        bottom: 0px;
+        width: 15vw;">
         <img src="ieee_assets/images/IIST-Logo-white.png">
     </div>
 
@@ -144,7 +166,7 @@
         <img src="dist/workshop_assets/logo_wire.png">
     </div>
     <div><a href="#" class="scroll-down" address="true"></a></div>
-    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_kumaran<br>&copy
+    <div class="footer"><a href="https://github.com/KumaranShivam5">Portal Designed by <br>Ushasi <br>&copy
             Conscientia
             2020</a></div>
     <div class="loader"
@@ -179,17 +201,17 @@
             // scene
 
             scene = new THREE.Scene();
-            fogColor = new THREE.Color(0x000000);
+            //fogColor = new THREE.Color(0x000000);
 
-            scene.background = fogColor;
-            scene.fog = new THREE.Fog(fogColor, 2500, 5000);
+            //scene.background = fogColor;
+            //scene.fog = new THREE.Fog(fogColor, 2500, 5000);
 
 
-            var ambientLight = new THREE.AmbientLight(0xC40CE8, 0.5);
+            //var ambientLight = new THREE.AmbientLight(0xC40CE8, 0.5);
             //scene.add( ambientLight );
 
-            var pointLight = new THREE.PointLight(0x29C7D5, 2);
-            camera.add(pointLight);
+            //var pointLight = new THREE.PointLight(0x29C7D5, 2);
+            //camera.add(pointLight);
             scene.add(camera);
 
             // texture
@@ -202,8 +224,13 @@
             };
 
             // Material
+
+
+
+
+            //var mymaterial=new THREE.
             firstChildMaterial = new THREE.MeshLambertMaterial({
-                wireframe: true,
+                wireframe: false,
             });
 
 
@@ -220,7 +247,7 @@
             };
 
             var loader = new THREE.OBJLoader(manager);
-            loader.load('robo.glb', function (object) {
+            loader.load('web2.glb', function (object) {
 
                 object.traverse(function (child) {
 
@@ -233,15 +260,28 @@
                 })
                 //object.scale.set(3,3,3);
                 object.position.z = -39;
-                object.position.y = -14;
+                object.position.y = 1.5;
+                object.position.x=1.5;
                 scene.add(object);
-                object.scale.set(3.30955818181818, 3.30955818181818, 3.30955818181818);
+                object.scale.set(8, 8, 8);
+                object.rotation.set(-1, -1, 0);
+                    var pos = 0.01;
+                     var id = setInterval(frame, 50);
+
+                function frame() {
+                   
+                        object.rotation.set(0, 0, pos);
+                    pos=pos+0.03;
+                    
+                };
+                //object.scale.set(3.30955818181818, 3.30955818181818, 3.30955818181818);
                 window.addEventListener('mousemove', function (e) {
                     var mouse3D = new THREE.Vector3(
                         (event.clientX / window.innerWidth) * 30 - 15,
                         - (event.clientY / window.innerHeight) * 30 + 10);
 
-                    object.lookAt(mouse3D);
+                    //object.lookAt(mouse3D);
+                   
                 })
 
 
@@ -306,7 +346,7 @@
 
     </script>
     <!--MONK script starts here-->
-
+    <div style="position: fixed;width: 100vw;    height: 100vh;z-index: -9;    top: 0px;left: 0px;    background: radial-gradient(circle,      #00ffe742, #02484266    ,#000000de,black);"></div>
     <script src="ieee_assets/js/script.js"></script>
     <script>
         new fullpage('#fullpage', {
@@ -327,7 +367,7 @@
             scrollHorizontally: true,
             lazyLoading: true,
         });
-        
+
     </script>
 
 </body>

@@ -13,6 +13,21 @@
 .mono{
     font-family:monospace !important;
 }
+.hacked{
+    font-family:'hacked' !important;
+}
+
+
+@font-face {
+	font-family: "hacked";
+	src: url("../fonts/hacked.ttf");
+}
+
+@font-face {
+	font-family: "cgothic";
+	src: url("../fonts/cgothic.ttf");
+}
+
 .bg-translucent{
     background-color:#0000003d !important;
 }
