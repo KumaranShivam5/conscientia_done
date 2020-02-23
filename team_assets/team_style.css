@@ -1,0 +1,36 @@
+.team-title{
+    line-height: unset !important;
+    text-align: left;
+    border-top: 1px dashed crimson;
+    border-bottom: 1px dashed crimson;
+}
+.team-desc li{
+    font-size: 2vh;
+    font-family: monospace;
+}
+.team-desc .name{
+    font-family: hacked;
+    font-size: 5vh;
+    color: cyan;
+}
+.team-desc-wrapper{
+    border-left:1px dashed crimson;
+    border-right:1px dashed crimson;
+}
+.team-desc-subtitle{
+    font-family: hacked !important;
+    font-size: 3vh !important;
+    color: crimson;
+}
+
+
+.team-desc-wrapper{
+    max-width: 60% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .team-desc-wrapper{
+        max-width:unset !important;
+        
+    }
+}

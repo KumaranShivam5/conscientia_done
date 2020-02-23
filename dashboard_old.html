@@ -53,9 +53,6 @@
     <script src="dist/events_assets/event_reg.js?v=2.0"></script>
     <script src="shared/create_dash.js"></script>
 
-    <script src="shared/fullpage.extensions.min.js"></script>
-    <link rel="stylesheet" href="shared/fullpage.css">
-
 </head>
 
 <body onload="main_menu_open()">
@@ -71,7 +68,6 @@
             <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
             <a class="col content" href="webbed_us.html"><span>Webbed</span></a>
             <a class="col content" href="threempt.html?v=7.5"><span>3MPT</span></a>
-            <a class="col content" href="merch.html?v=7.5"><span>Merchandise</span></a>
             <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
             
             <div class="col blank"></div>
@@ -114,7 +110,7 @@
     <!--navbar ends here-->
 
 
-    <div id="fullpage">
+    <div id="main" style="transform: translate3d(0px, 0%, 0px); transition: transform 700ms ease 0s;">
 
 
 
@@ -142,7 +138,7 @@
             </div>
         </section>
         <section class="section">
-            <div class="table-wrapper scrollable" style="max-height:60vh;">
+            <div class="table-wrapper">
                 <table id="my-events" class="dashed-table">
                     <tr class="universal-button">
                         <th>Name</th>
@@ -325,31 +321,18 @@
         }
 
     </script>
-   
-    <script src="ieee_assets/js/script.js"></script>
+    <script src="ieee_assets/js/fullPage.min.js"></script>
     <script>
-        new fullpage('#fullpage', {
-            //licenseKey: 'YOUR KEY HERE',
-            menu: '#menu',
-            lockAnchors: false,
-            anchors: ['top', 'play'],
-            navigation: true,
-            navigationPosition: 'right',
-            navigationTooltips: ['top', 'Merch', 'Combo', 'Partner'],
-            showActiveTooltip: false,
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom',
-            dragAndMove: true,
-
-            sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
-            autoScrolling: true,
-            scrollHorizontally: false,
-            lazyLoading: false,
-            normalScrollElements: '.scrollable'
+        var page = new FullPage("#main", {
+            onLeave: function (e) {
+                console.log(e)
+            },
+            afterLoad: function (e) {
+                console.log(e)
+            }
         });
-
     </script>
-
+    <script src="ieee_assets/js/script.js"></script>
     <script>
         $("#events-home").click(function () {
             page.moveTo(0);

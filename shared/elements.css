@@ -4,6 +4,21 @@
 .cyan{
     color:cyan !important;
 }
+
+.bg-cyan{
+    background-color:cyan !important;
+}
+.bg-crimson{
+ background-color:crimson !important;
+}
+
+.border-cyan{
+    border-color:cyan !important;
+}
+.border-crimson{
+    border-color:crimson !important;
+}
+
 .crimson{
     color:crimson !important;
 }
@@ -296,4 +311,82 @@ h1 ,h2, h3, h4, h5{
     .title-large-flat{
         font-size:6vh;
     }
+    .dashed-table{
+        overflow:scroll;
+        
+    }
+    .bracket-sides{
+        padding:10px;
+    }
+   
+}
+
+
+.dashed-table td{
+    font-family: monospace;
+    padding: 10px;
+    font-size: 2vh;
+    border-right: 1px solid crimson;
+    max-width: fit-content;
+    overflow-wrap: break-word;
+}
+.dashed-table tr{
+    border-bottom: 1px dashed cyan;
+    border-right: 14px solid crimson;
+    border-left: 4px solid crimson;
+    text-align: center;
+}
+.dashed-table{
+    background: #0000008c;
+    margin:auto;
+    overflow-y:scroll;
+    overflow-x:hidden !important;
+}
+.dashed-table th{
+    padding: 5px;
+    border-right: 3px solid cyan;
+    border-left: 3px solid crimson;
+}
+
+/*BRACKET BOX FORATION*/
+.bracket-sides{
+    margin:8px;
+    border-left: 5px solid cyan;
+    border-right: 5px solid cyan;
+    padding: 20px 30px 20px 30px;
+}
+.bracket-top-left{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top:0px;
+    left:0px;
+}
+.bracket-top-right{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top:0px;
+    right:0px;
+}
+.bracket-bottom-left{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    bottom:0px;
+    left:0px;
+}
+.bracket-bottom-right{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    bottom:0px;
+    right:0px;
+}
+
+/*bracket ends here*/
+
+.content-image{
+    object-fit: contain;
+    max-height:30vh;
 }

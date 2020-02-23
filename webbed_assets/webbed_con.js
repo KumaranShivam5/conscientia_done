@@ -50,13 +50,50 @@ function update_table(data) {
         name = data[i].name;
         college = data[i].college;
         rank = data[i].stage;
-
+        
+        
 
         table_construct = "<tr><td>" + rank + "</td><td>" + name + "</td><td>" + college + "</td></tr>"
         $("#leaderboard_table").append(table_construct);
     }
 }
 
+/*
+function update_table_next(){
+    $("#prev_button").attr("type","enabled");
+    start=start+7;
+    end=end+7;
+    if(end>last){
+        update_table(start,last);
+        $("#next_button").attr("type","disabled");
+    }
+    else {
+        update_table(start,end);
+    }
+}
+
+function update_table_prev(){
+    $("#next_button").attr("type","enabled");
+    if (start==0){
+        $("prev_button").attr("type","disabled");
+        update_table(start,end);
+    }
+    else {
+        start-=7;
+    }
+}
+
+*/
+
+
+
+//table pagination
+$("#leaderboard_table").simplePagination({
+    perPage: 10,
+    currentPage: 2,
+    previousButtonClass: "btn btn-default btn-xs",
+    nextButtonClass: "btn btn-default btn-xs"
+  });
 
 
 function getCookie(cname) {
@@ -146,11 +183,18 @@ function getquestion_v2() {
             url: "http://dhanak19-001-site4.htempurl.com/api/web/ques/" + obj.DId,
             beforeSend:function(){console.log('starting getQues Request');},
             success: function (result) {
-                console.log(result);
-                $("#qimg1").attr("src", "data:image;base64," + result.i1);
-                $("#qimg2").attr("src", "data:image;base64," + result.i2);
-                $("#qimg3").attr("src", "data:image;base64," + result.i3);
-                $("#level").html(result.stage);
+                if(result.stage>15){
+                    alert("Congrulations on Successfully completing WEBBED. Stay Connected.");
+                }
+                else{
+                    console.log(result);
+                    $("#qimg1").attr("src", "data:image;base64," + result.i1);
+                    $("#qimg2").attr("src", "data:image;base64," + result.i2);
+                    $("#qimg3").attr("src", "data:image;base64," + result.i3);
+                    $("#level").html(result.stage);
+                }
+                ;
+                
                 //$(".qs_loader").css("display","none");
 
             }

@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="ieee_assets/css/style_ieee.css?v=8.5">
     <link rel="stylesheet" href="dist/workshop_assets/style.css?v=2.0">
-    <link rel="stylesheet" href="shared/elements.css?v=5.0">
+    <link rel="stylesheet" href="shared/elements.css?v=3.0">
 
     <script src="http://threejs.org/build/three.min.js"></script>
     <script src="./js/script_glitch.js?v=3.1"></script>
@@ -48,6 +48,18 @@
             font-size: 2.5vh;
 
         }
+        .center-display{
+            overflow:unset !important;
+            max-height:80vh;
+            padding-top:0px;
+        }
+        #sub-list-div{
+            display: block;
+            overflow-y: unset !important;
+        }
+        .content{
+            cursor: pointer  !important;
+        }
     </style>
     <link rel="stylesheet" href="ieee_assets/css/style.css?v=13.0">
     <script src="dist/events_assets/event_reg.js?v=2.0"></script>
@@ -61,25 +73,25 @@
 <body onload="main_menu_open()">
     <!--nav bar starts here-->
     <!--MENU optimization for mobil site is in ieee_assets/css/style_ieee.css-->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
 
     <div class="container main-menu main-menu-closed">
         <div class="row justify-content-center">
             <div class="col blank"></div>
+            <a href="http://conscientia.co.in"><div class="col content">Conscientia</div></a>
             <div class="col content" id="login"><span></span></div>
-            <a class="col content" href="http://conscientia.co.in"><span>Home</span></a>
-            <a class="col content" href="events_v2.html?v=7.5"><span>Events</span></a>
-            <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
-            <a class="col content" href="webbed_us.html"><span>Webbed</span></a>
-            <a class="col content" href="threempt.html?v=7.5"><span>3MPT</span></a>
-            <a class="col content" href="merch.html?v=7.5"><span>Merchandise</span></a>
-            <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
+            <div class="col content" onclick="load_list('vihang')" id="vihang"><span>vihang</span></div>
+            <div class="col content" onclick="load_list('robotics')" id="robotics"><span>Robotics</span></div>
+            <div class="col content" onclick="load_list('phil')" id="phil"><span>Philosophia</span></div>
+            <div class="col content" onclick="load_list('mecha')" id="mecha"><span>Mechatronics</span></div>
+            <div class="col content" onclick="load_list('astro')" id="astro"><span>Astronomia</span></div>
+            <div class="col content" onclick="load_list('kalad')" id="kalad"><span>Kaladioscope</span></div>
+            <div class="col content" onclick="load_list('paripath')" id="paripath"><span>Paripath</span></div>
+            <div class="col content" onclick="load_list('online')" id="online"><span>Online</span></div>
+            <div class="col content" onclick="load_list('gaming')" id="gaming"><span>Gaming</span></div>
             
-            <div class="col blank"></div>
-            <div class="col blank"></div>
-            <div class="col blank"></div>
-            <div class="col blank"></div>
-            <div class="col blank" ></div>
-            <div class="col blank"></div>
         </div>
     </div>
     <a id="menu-button" href="#">
@@ -114,46 +126,133 @@
     <!--navbar ends here-->
 
 
+    <!--
+    <nav id="nav">
+        <div class="nav-icon" id="nav-icon"><span></span></div>
+        <ul id="sub-list">
+            
+                  <li style="background-image: url(dist/workshop_assets/wire/neural.png);"><a href="#home"
+                    style="background:black;" id="button-click">Neural <br>Network</a></li>
+            <li style="background-image: url(dist/workshop_assets/wire/biomimicry.png);"><a href="#home"
+                    style="background:black;" onclick="data_update(bm)">Bio<br>mimicry</a></li>
+            <li style="background-image: url(dist/workshop_assets/wire/3d.png);"><a href="#home"
+                    style="background:black;" onclick="data_update(ag)">3D AR</a></li>
+            <li style="background-image: url(dist/workshop_assets/wire/model.png);"><a href="#home"
+                    style="background:black;" onclick="data_update(md)">Model<br>Rocketry</a></li>
+            <li style="background-image: url(dist/workshop_assets/wire/sixth.png);"><a href="#home"
+                    style="background:black;" onclick="data_update(ss)">6th Sense<br>robotics</a></li>
+            <li style="background-image: url(dist/workshop_assets/wire/swarm.png);"><a href="#ho"
+                    style="background:black;" onclick="data_update(sr)">Swarm<br>robotics</a></li>
+            
+
+        </ul>
+    </nav>
+-->
+
     <div id="fullpage">
+        <section class="section" data-anchor="home">
+            <div class="container" id="sub-list-div">
 
+            </div>
+        </section>
+        <section class="section" data-anchor="intro">
+            <div class="container center-display ">
 
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6 cell" style="border-left:0px;">
+                        <div class="row" style="border-bottom:1px solid salmon">
+                            <div class="col text-right">
+                                <h1 class="cell-title" id="event-title"></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center" style="padding-top:20px;">
+                                <img src="dist/workshop_assets/neural_wire.png" class="float-fight workshop-logo"
+                                    id="event-logo">
+                            </div>
+                        </div>
 
-        <section class="section">
+                    </div>
+                    <div class="col-sm-12 col-lg-6 cell cell-detail">
+                        <p class="" id="event-intro" class="scrollable"  style="max-height:65vh;overflow-y:scroll;">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" data-anchor="details">
             <div class="container center-display">
                 <div class="row align-items-center">
                     <div class="col-sm-6 cell cell-title">
-                        <span style="font:monospace;color:crimson;font-size: 2vh;text-align: left;">Welcome to the Portal..</span>
-                        <span style="text-transform:uppercase;width:100%;text-align: center;display:block;font-size:3vh;" class="mx-auto" id="user-name">
-
+                        <span style="width:100%;text-align: center;display:block;" class="mx-auto">
+                            Details
                         </span>
                     </div>
                     <div class="col-sm-6 cell cell-detail">
 
                         <ul>
-                            <li  id="user-cid"></li>
-                            <li  id="user-email"></li>
-                            <li  id="user-insti"></li>
-                            <li  id="user-phone"></li>
+                            <li id="event-date">Date:</li>
+                            <li id="event-venue">Venue::</li>
+                            <li id="event-time">Time::</li>
+                            <li id="event-prize">Prize Money ::</li>
+                            <li id="event-contact">contact ::</li>
                         </ul>
-                        <div id="user-events"></div>
-                        <button class="universal-button" onclick="logout()">LOGOUT</button>
+
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="table-wrapper scrollable" style="max-height:60vh;">
-                <table id="my-events" class="dashed-table">
-                    <tr class="universal-button">
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Venue</th>
-                        <th>Time</th>
-                        <th>Updates</th>
-                    </tr>
-                </table>
+        <section class="section" data-anchor="format">
+            <div class="container center-display">
+                <div class="row align-items-center">
+                    <div class="col-sm-6 cell cell-title">
+                        <span style="width:100%;text-align: center;display:block;" class="mx-auto">
+                            Format
+                        </span>
+                    </div>
+                    <div class="col-sm-6 cell cell-detail scrollable" style="max-height:65vh;overflow-y:scroll;overflow-x: hidden;" id="event-format">
+
+
+                    </div>
+                </div>
             </div>
         </section>
+        <section class="section " data-="Rules">
+            <div class="container center-display">
+                <div class="row align-items-center">
+                    <div class="col-sm-6 cell cell-title">
+                        <span style="width:100%;text-align: center;display:block;" class="mx-auto">
+                            Rules
+                        </span>
+                    </div>
+                    <div class="col-sm-6 cell cell-detail scrollable" style="max-height:65vh;overflow-y:scroll;" id="event-rules">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container center-display">
+                <div class="row align-items-center">
+                    <div class="col-sm-6 cell cell-title">
+                        <span style="width:100%;text-align: center;display:block;" class="mx-auto">
+                            Register
+                        </span>
+                    </div>
+                    <div class="col-sm-6 cell cell-detail">
+
+                        <br><a href="#"><button class="reg-button" id="event-reg">Register</button></a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
     <div id="logo" style="position: fixed;
     bottom: 0px;
@@ -165,12 +264,17 @@
         <img src="dist/workshop_assets/logo_wire.png">
     </div>
     <div><a href="#" class="scroll-down" address="true"></a></div>
-    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>WEB_TEAM_kumaran<br>&copy Conscientia
+    <div class="footer"><a href="https://github.com/KumaranShivam5">Developed by <br>Kumaran.S()<br>&copy Conscientia
             2020</a></div>
-    <div class="loader"
-        style="backdrop-filter: blur(5px);display:none;position:fixed;width:1000vw;height:100vh;top:0px;left:0px;z-index: 9999999999;background:transparent;">
+    
+    <div class="home" id="events-home" style="">
+        Events <br><span style="font-size: 3vh;
+        background: black;
+        border: 1px 0px 1px 0px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        cursor: pointer;">home</span>
     </div>
-
     <script>
 
 
@@ -325,61 +429,12 @@
         }
 
     </script>
-   
+  
     <script src="ieee_assets/js/script.js"></script>
     <script>
-        new fullpage('#fullpage', {
-            //licenseKey: 'YOUR KEY HERE',
-            menu: '#menu',
-            lockAnchors: false,
-            anchors: ['top', 'play'],
-            navigation: true,
-            navigationPosition: 'right',
-            navigationTooltips: ['top', 'Merch', 'Combo', 'Partner'],
-            showActiveTooltip: false,
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom',
-            dragAndMove: true,
-
-            sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
-            autoScrolling: true,
-            scrollHorizontally: false,
-            lazyLoading: false,
-            normalScrollElements: '.scrollable'
-        });
-
-    </script>
-
-    <script>
         $("#events-home").click(function () {
-            page.moveTo(0);
+            document.location="#home"
         });
-
-        $(document).ready(function () {
-            var x = getCookie("profdata");
-            console.log(x);
-            console.log("dash function run");
-            if (x != "") {
-                data = JSON.parse(x);
-                var name = data.Name.split(" ");
-                $("#login span").html("<a href='dashboard.html'>" + name[0] + "</a>");
-                console.log("function run inside if");
-                $("#user-name").html(data.Name);
-                $("#user-cid").html("ConID : " +data.DId);
-                $("#user-email").html("Email ID : "+data.Email);
-                $("#user-phone").html("Contact No : "+data.Phone);
-                $("#user-insti").html("Institute : "+ data.College);
-                create_events_list(data.DId);
-
-
-            }
-            else {
-                $("#login span").html("<a href='login_v3.html'>Login</a>");
-                //console.log("inside else");
-            }
-            
-        });
-
         var eventsAllData;
         function load_list(eventName) {
             //$(".main-menu .col").removeClass("active");
@@ -401,15 +456,16 @@
                         console.log("function variable is" + load_function);
                         load_function = "onclick=load_data_v2(" + load_function + ")";
                         console.log("function variable updated is : " + load_function);
-                        list_item = "<div class='sub-menu-items-div' style='background-image: url(" + result.user[i].image + ");' " + load_function + "><a href='#home'style=';' id='button-click'>" + result.user[i].name + "</a></div>";
+                        list_item = "<div class='sub-menu-items-div' style='background-image: url(" + result.user[i].image + ");' " + load_function + "><a href='#intro' style=';' id='button-click'>" + result.user[i].name + "</a></div>";
                         $("#sub-list-div").append(list_item);
                     };
                     eventsAllData = result;
-                    page.moveTo(0);
+                    //page.moveTo(0);
+                    document.location="#home"
                 }
                 ,
-                beforeSend: function () { $(".loader").css("display", "block") },
-                complete: function () { $(".loader").css("display", "none") }
+                beforeSend: function () { open_loader(); },
+                complete: function () { close_loader();}
             });
         }
 
@@ -466,69 +522,62 @@
             var request = "register_for('" + eventsAllData.user[i].id + "')";
             $("#event-reg").attr("onclick", request);
 
-            page.moveTo(1);
+            document.location="#intro";
         }
         function register_for(eventId) {
             var x = getCookie("profdata");
+            open_loader();
             if (x != "") {
                 var data = JSON.parse(x);
                 var url = "http://dhanak19-001-site4.htempurl.com/api/user/ereg/" + data.DId + "/" + eventId + "/0000";
                 console.log("making request with", url);
-                //$.ajax({
-                //  url: url,
-                //success: function (result) { alert(result); }
+                $.ajax({
+                    url: url,
+                    
+                    success: function (result) { 
+                       // if(result.message=="Registered")
+                         //   alert("Registered");
+                        //else alert("Registration for this event will start soon..Stay connected.");
+                        alert(result.message);
+                        close_loader();
+                    }
 
-                //});
+                });
             }
             else {
                 alert("login to contiue");
+                close_loader();
+                window.location="login_v3.html";
+
             };
+           
 
-
-        }
-        function create_events_list(id){
-
-            var url="http://dhanak19-001-site4.htempurl.com/api/user/regd/"+id;
-            var eventIdList=[];
-            console.log(url);
-            $.ajax({
-                url:url,
-                type:'get',
-                success: function(result){
-                    console.log(result);
-                    for(i=0;i<result.length;i++){
-                        eventIdList.push(result[i].eventid);
-                    }
-                    console.log("list of events: ", eventIdList);
-                    generate_event_table(eventIdList);
-                }
-            });
-        }
-
-        function generate_event_table(eList){
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbznjiWtK-8Tqao9zw-_pU6i8aLBJLQ0R_NyLrjr0x2sqEAqWl8/exec",
-                type:'get',
-                success:function(data){
-                    console.log("ok all the data is ")
-                    for(i=0;i<eList.length;i++)
-                    {
-                        for(j=0;j<data.length;j++)
-                        {
-                            
-                            if(eList[i]==data[j].event_id)
-                            {
-                                var to_append="<tr><td>"+data[j].name +"</td><td>"+data[j].event_date+"</td><td>"+data[j].venue+"</td><td>"+data[j].event_time+"</td><td>"+data[j].desc+"</td></tr>";
-                                console.log(to_append);
-                                $("#my-events").append(to_append);
-                            }
-                            else console.log("no event registered");
-                        }
-                    }
-                }
-            });
         }
     </script>
+
+<script>
+    new fullpage('#fullpage', {
+        //licenseKey: 'YOUR KEY HERE',
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:  ['home','intro','details','format','rules','register'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['home','intro','details','format','rules','register'],
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        dragAndMove: true,
+
+       // sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
+        autoScrolling: true,
+        scrollHorizontally: false,
+        lazyLoading: false,
+        normalScrollElements: '.scrollable'
+    });
+
+</script>
+    <script src="shared/elements.js"></script>
 
 </body>
 

@@ -1,0 +1,323 @@
+<html>
+
+<head>
+
+    <title>Sponsors || Conscientia 2020</title>
+
+    <link rel="icon" href="images/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keyword"
+        content="IIST indian istitute of space science and technology technical festival in south india largest technical festival. ISRO , kumaran shivam, shivam, kumaran, thiruvananthapuram college fest, india college fest">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!--script for full page scrolling-->
+
+    <link rel="stylesheet" href="ieee_assets/css/style_ieee.css?v=8.5">
+    <link rel="stylesheet" href="dist/workshop_assets/style.css?v=2.0">
+    <link rel="stylesheet" href="shared/elements.css?v=5.0">
+    <link rel="stylesheet" href="shared/webbed_styles.css">
+
+    <script src="http://threejs.org/build/three.min.js"></script>
+    <script src="./js/script_glitch.js?v=3.1"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+    <!--Kumaran's theme-->
+    <link rel='stylesheet' href="shared/elements.css">
+    <script src="webbed_assets/webbed_con.js"></script>
+    <style type="text/css">
+        canvas {
+            position: absolute;
+            top: 0px;
+            z-index: -10;
+            opacity: 0.5;
+        }
+
+        .section {
+            background: transparent !important;
+            color: white !important;
+        }
+
+        #events-home {
+            position: absolute;
+            top: 0px;
+            font-family: nasa;
+            font-size: 2.5vh;
+
+        }
+
+        .fp-prev {
+            background-image: url('webbed_assets/prev.png') !important;
+        }
+
+        .fp-next {
+            background-image: url('webbed_assets/next.png') !important;
+        }
+
+        .name {
+            font-family: nasa !important;
+            font-size: 3vh !important;
+            color: cyan !important;
+        }
+        .p{
+            padding:5px !important; 
+        }
+    </style>
+    <link rel="stylesheet" href="ieee_assets/css/style.css?v=13.0">
+    <script src="dist/events_assets/event_reg.js?v=2.0"></script>
+    <script src="shared/create_dash.js"></script>
+    <script src="shared/fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="shared/fullpage.css">
+    <link rel="stylesheet" href="team_assets/team_style.css">
+    <script src="shared/jquery.simplePagination.js"></script>
+
+</head>
+
+<body onload="main_menu_open()">
+    <!--nav bar starts here-->
+    <!--MENU optimization for mobil site is in ieee_assets/css/style_ieee.css-->
+
+    <div class="container main-menu main-menu-closed" style="font-family:'hacked';">
+        <div class="row justify-content-center">
+            <div class="col blank"></div>
+            <div class="col content" id="login"><span></span></div>
+            <a class="col content" href="http://conscientia.co.in?v=7.5"><span>Home</span></a>
+            <a class="col content" href="events_v2.html?v=7.5"><span>Events</span></a>
+            <a class="col content" href="workshop_page.html?v=7.5"><span>Workshop</span></a>
+            <a class="col content" href="threempt.html?v=7.5"><span>3MPT</span></a>
+            <a class="col content" href="team.html?v=7.5"><span>Team</span></a>
+
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+            <div class="col blank"></div>
+        </div>
+    </div>
+    <a id="menu-button" href="#">
+        <span></span>
+    </a>
+    <script>
+        var flag = 0;
+        $("#menu-button").click(function () {
+            if (flag == 0) {
+                main_menu_open();
+            }
+            else {
+                main_menu_close();
+            }
+        });
+        function main_menu_open() {
+            $("#menu-button span").addClass("on");
+            flag = 1;
+            $(".main-menu").removeClass("main-menu-closed");
+            $(".main-menu").addClass("main-menu-open");
+
+        }
+        function main_menu_close() {
+            $("#menu-button span").removeClass("on");
+            flag = 0;
+            $(".main-menu").removeClass("main-menu-open");
+            $(".main-menu").addClass("main-menu-closed");
+        }
+
+    </script>
+
+    <!--navbar ends here-->
+    <!--MAIN Content starts-->
+
+    <div id="fullpage">
+        <!-- this section is the introduction page and the rule page-->
+        <div class="section" data-anchor="apex">
+            <div class="slide" data-anchor="slide1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col title-xl-nasa  team-title">Title Sponsor</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 bracket-sides border-cyan">
+                            <div class="bracket-top-left bg-cyan"></div>
+                            <div class="bracket-bottom-left bg-cyan"></div>
+                            <div class="bracket-top-right bg-cyan"></div>
+                            <div class="bracket-bottom-right bg-cyan"></div>
+                            <img src="team_assets/sponsor_images/ubi.png" class="content-image">
+                        </div>
+                        <div class="col-lg-8 team-desc-wrapper" style="">
+                            <div class="row">
+                                <div class="col bracket-sides">
+                                    <div class="bracket-top-left bg-cyan"></div>
+                                    <div class="bracket-bottom-left bg-cyan"></div>
+                                    <div class="bracket-top-right bg-cyan"></div>
+                                    <div class="bracket-bottom-right bg-cyan"></div>
+                                    <ul class="team-desc nasa">
+                                        <li class="name">Union Bank of India</li>
+                                        <li><a href="http;//unionbankofindia.co.in">www.unionbankofindia.co.in</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--this slide contains the leaderboard (kumaran please fix the scroll issue-->
+            <div class="slide" data-anchor="slide2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col title-xl-nasa team-title">General Sponsor / Tech Expo partner</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 bracket-sides border-cyan">
+                            <div class="bracket-top-left bg-cyan"></div>
+                            <div class="bracket-bottom-left bg-cyan"></div>
+                            <div class="bracket-top-right bg-cyan"></div>
+                            <div class="bracket-bottom-right bg-cyan"></div>
+                            <img src="team_assets/sponsor_images/ess-logo.png" class="content-image">
+                        </div>
+                        <div class="col-lg-8 team-desc-wrapper" style="">
+                            <div class="row">
+                                <div class="col bracket-sides">
+                                    <div class="bracket-top-left bg-cyan"></div>
+                                    <div class="bracket-bottom-left bg-cyan"></div>
+                                    <div class="bracket-top-right bg-cyan"></div>
+                                    <div class="bracket-bottom-right bg-cyan"></div>
+                                    <ul class="team-desc nasa">
+                                        <li class="name">Embedded Systems Solutions</li>
+                                        <li><a href="http://www.embeddedindia.com/">visit site</a></li>
+                                        <li>
+                                            <p class="scrollable">
+
+                                                Address: #37, ‘EMBEDDED HOME’, 36TH CROSS, II BLOCK, RAJAJINAGAR<br>
+                                                City: BANGALORE – 560 010<br>
+                                                Phone No.: 080-67648888<br>
+                                                Website: www.embeddedindia.com
+                                            </p>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col title-xl-nasa team-title">Technology Partner</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 bracket-sides border-cyan">
+                            <div class="bracket-top-left bg-cyan"></div>
+                            <div class="bracket-bottom-left bg-cyan"></div>
+                            <div class="bracket-top-right bg-cyan"></div>
+                            <div class="bracket-bottom-right bg-cyan"></div>
+                            <img src="team_assets/sponsor_images/e_logo.jpg" class="content-image">
+                        </div>
+                        <div class="col-lg-8 team-desc-wrapper" style="">
+                            <div class="row">
+                                <div class="col bracket-sides">
+                                    <div class="bracket-top-left bg-cyan"></div>
+                                    <div class="bracket-bottom-left bg-cyan"></div>
+                                    <div class="bracket-top-right bg-cyan"></div>
+                                    <div class="bracket-bottom-right bg-cyan"></div>
+                                    <ul class="team-desc nasa">
+                                        <li class="name">ELECTRONIC ENTERPRISES (INDIA) PVT. LTD.</li>
+                                        <li><a href="https://www.eeipl.in/">visit site</a></li>
+                                        <li>
+                                            <p class="scrollable" style="overflow-y:scroll;">
+                                                Authorized Distributors of
+                                                Stanford Research Systems USA for Lock-in, FFT, RGA’s, RF sig, Photon
+                                                counters/Gated
+                                                integrators, Box car averagers and Audio analysers<br>
+                                                Kimball Physics USA for Electron Guns (1eV to 100KeV) and compact UHV
+                                                chambers<br>
+                                                Berkeley Nucleonics Corp USA for Digital Delay generators and
+                                                RF/Microwave products<br>
+                                                Krohn-Hite USA for Tunable Active filters and Precision DC Sources
+                                                CAEN Italy for NIM and Desktop DC Power supplies and Digital
+                                                Spectroscopy products
+                                            </p>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--this slide contains the leaderboard (kumaran please fix the scroll issue-->
+
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <!--Main content ends-->
+    <div id="logo" style="position: fixed;
+    bottom: 0px;
+    width: 15vw;">
+        <img src="ieee_assets/images/IIST-Logo-white.png">
+    </div>
+
+    <!--the link to all the pages is here, for those who are too dumb to scroll.(kumaran please fix the link issue-->
+
+
+    <div class="con-logo">
+        <img src="dist/workshop_assets/logo_wire.png">
+    </div>
+    <!-- <div><a href="#" class="scroll-down" address="true"></a></div>-->
+   
+    <div class="footer"><a href="https://github.com/KumaranShivam5">Portal Designed by <br>Kumaran.S() <br>&copy
+            Conscientia
+            2020</a></div>
+    <div class="loader"
+        style="backdrop-filter: blur(5px);display:none;position:fixed;width:1000vw;height:100vh;top:0px;left:0px;z-index: 9999999999;background:transparent;">
+    </div>
+    <!--MONK script starts here-->
+
+
+    <!--MONK script starts here-->
+
+
+    <script src="ieee_assets/js/script.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            //licenseKey: 'YOUR KEY HERE',
+            menu: '#menu',
+            lockAnchors: false,
+            anchors: ['top', 'play'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['top', 'Merch', 'Combo', 'Partner'],
+            showActiveTooltip: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+            dragAndMove: true,
+
+            sectionsColor: ['black', 'yellow', '#a46732', 'cyan'],
+            autoScrolling: true,
+            scrollHorizontally: false,
+            lazyLoading: true,
+            normalScrollElements: '.scrollable'
+        });
+
+    </script>
+
+</body>
+
+</html>
