@@ -1,0 +1,297 @@
+/* ============================================================================================== 
+This copyright notice must be kept untouched in the stylesheet at all times.
+The original version of this stylesheet and the associated (x)html 
+is available at http://www.script-tutorials.com/night-sky-with-twinkling-stars/
+Copyright (c) Script Tutorials. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 5000px;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 5000px;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 5000px;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 5000px;}
+}
+
+ .clouds, .nebula {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.nebula {
+	background: transparent url(nebula.jpg);
+	z-index:-6;
+	
+}
+
+
+.clouds{
+    background:transparent url(clouds.png) repeat top center;
+    z-index:-3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+@font-face {
+	font-family: "elixia";
+	src: url("ELIXIA.ttf");
+}
+
+@font-face {
+	font-family: "caviardreams";
+	src: url("CaviarDreams.ttf");
+}
+
+
+.astro_heading {
+	font-family: 'elixia';
+	z-index:1;
+    font-weight: 900;
+    font-size: 7vw;
+	padding: 10px;
+	position:absolute;
+	color:white;
+	transform:translate(0,700%);
+	text-align: center;
+    line-height: 2rem;	
+}
+
+.astro_subheading {
+	font-family:'elixia';
+    font-weight: 900;
+    font-size: 7vh;
+	padding: 30px;
+	text-align: center;
+    line-height: 2rem;
+}
+
+.image_box{	
+	width:170px;
+	height:174px;
+	z-index:4;
+	transform:translate(0%,-30%);
+	border:2px solid white;
+	position:relative;
+	
+}
+
+.image_box::before{
+      width: 170px;
+      height: 170px;
+	  z-index:-1;
+	  content:'';
+      position:absolute;
+	  border:2px solid black;
+	  transform:rotate(45deg);
+    }
+
+.image_in{
+	width:170px ;
+	height:170px;
+}
+
+.submit_button1 {
+	background-color:transparent; 
+	font-family:'caviardreams';
+	color: white; 
+	border: 2px solid gray;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	border-left: 2px solid rgba(0,145,255,1);
+	border-right: 2px solid rgba(0,145,255,1);
+	border-top: 2px solid rgba(0,145,255,1);
+	border-bottom: 2px solid rgba(0,145,255,1);
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.submit_button1:hover {
+	background-color: rgba(0,145,255,1);
+	color: white;
+}
+
+.input_button {
+    padding: 10px;
+    width: 100%;
+    background: rgba(255,255,255,0.3);
+    color:white;
+    font-family: 'caviardreams';
+    border-left: 10px solid rgba(0,2,34,1);
+    border-right: 10px solid rgba(0,2,34,1);
+    border-top: 1px solid rgba(0,2,34,1);
+    border-bottom: 1px solid rgba(0,2,34,1);
+    margin: 10px;
+    transition: 0.2s;
+}
+.input_button:hover {
+    background: black;
+}
+
+.rule_page{
+	color:white;
+	z-index:1;
+	font-family:'caviardreams';
+	font-size:2.5vh;
+	text-align:left;
+	padding-bottom:-30px;
+}
+
+.rectangle {
+	height:200% !important;
+	z-index:0;
+	position:absolute;
+	transform:translate(85%,-30%);
+	width: 50vw;
+	border-left:1px solid cyan;
+	background-image:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+
+.astro_link {
+		font-family:'caviardreams';
+		font-weight:300;
+		z-index:2;
+		font-size: 1vw;
+		margin:0 auto;
+		bottom:10px;
+		border:2px solid rgba(138,43,226,1);
+		text-align:left ;
+		background-color:transparent;
+		text-decoration: underline;
+		color:black;
+		position:fixed;
+		transform:translate(90%,0);
+		
+	}
+	
+
+.table_wrapper {
+		position: relative;
+		height: 300px;
+		overflow: auto;
+		display: block;
+}
+
+table {
+	border:3px solid transparent !important;
+	border-spacing:5px ;
+	border-collapse:separate;
+}
+
+th {
+	background-color: rgba(0,0,0,0.7);
+	border:3px solid transparent;
+	font-family:'caviardreams';
+	font-size:2.5vh;
+	color: white;
+}
+
+
+tr:nth-child(odd) {
+	  background-color: #323C50;
+}
+
+tr:nth-child(even) {
+	  background-color: #2C3446;
+}
+
+tr:hover {
+	background-color:rgba(0,0,0,0.2);
+	color:black;
+}
+
+td {
+	height: 15px;
+	vertical-align: bottom;
+	border:1px solid transparent !important;
+	color:white;
+	font-family:'caviardreams';
+	font-size:2.5vh;
+	padding: 15px;
+	transition: 0.2s;
+}
+
+@media only screen and (max-width: 1000px) {
+	
+.image_box{	
+	width:140px;
+	height:144px;
+	z-index:5;
+	transform:translate(0%,-20%);
+	border:2px solid white;
+	position:relative;
+	
+	}
+
+.image_box::before{
+      width: 140px;
+      height: 140px;
+	  z-index:4;
+	  content:'';
+      position:absolute;
+	  border:2px solid black;
+	  transform:rotate(45deg);
+    }	
+	
+.image_in{
+	width:140px;
+	height:140px;
+	z-index:6;
+}
+	
+.astro_subheading {
+	transform:translate(0,-35%);	
+	}
+
+.rule_page {
+	font-size:2vh;
+}
+
+.rectangle{
+	transform:translate(0,-30%);
+}
+
+.astro_heading{
+	transform: translate(0,-110%);
+	font-size:5vh;
+}
+
+.astro_link{
+	font-size: 1.5vh;
+	transform:translate(30%,0);
+}
+	
+	
+}
+
+
+
